@@ -5,4 +5,4 @@ ___
 > Bot En Desarrollo🚩
 
 **꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦**
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=footer&text=Espero%20Hayas%20Disfrutado%20El%20Repositorio width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=footer&text=Espero%20Hayas%20Disfrutado%20El%20Repositorio&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/>
