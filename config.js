@@ -21,14 +21,14 @@ import { es } from "./lib/total-idiomas.js"
 global.botnumber = "";
 global.confirmCode = "";
 global.owner = [
-  ['51907376960', 'Dv Yer🚩', true],
-  ['584148256527', 'Legendary🚩', true],
-  ['5493865860047', 'Kenisawa🚩', true],
-  ['522431268546', 'I'm Fz🚩', true],
-  ['584120346669', 'Destroy🚩', true],
-  ['50557865603', 'WillZek🚩', true],
-  ['51913776697', 'Haru🚩', true],
-  ['50242073893', 'Jostin🚩', true]
+  ['51907376960', 'Star Yer🚩', true],
+  ['584148256527', 'Star Legendary🚩', true],
+  ['5493865860047', 'Star Kenisawa🚩', true],
+  ['522431268546', 'Star I'm Fz🚩', true],
+  ['584120346669', 'Star Destroy🚩', true],
+  ['50557865603', 'Star WillZek🚩', true],
+  ['51913776697', 'Star Haru🚩', true],
+  ['50242073893', 'Star Jostin🚩', true]
 ] //Numeros de owner 
 global.colabs = [
   ['50242783087', '>\`\`\` I\'m Danny ~ 卐', true]
