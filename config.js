@@ -50,18 +50,18 @@ global.APIKeys = { // APIKey Here
   'https://api.fgmods.xyz': `${fgkey}` //--- 100 de límite diario --- Regístrese en https://api.fgmods.xyz/
 }
 // Sticker WM
-global.packname = 'Sylph | Bot - Multi Device' 
-global.author = `FzKl.fcv`
-global.wm = '┊ꦿ🎄⿻ Sylph | Wa Bot❜ೃ'
+global.packname = 'StarCore | Bot - Multi Device' 
+global.author = `YerTX2`
+global.wm = '┊ꦿ🎄⿻ StarCore | Wa Bot❜ೃ'
 
 global.insta = 'https://www.instagram.com/'
 
 //imágenes
-global.imagen0 = fs.readFileSync('./src/Sylph_logo.jpg');
-global.imagen = fs.readFileSync('./src/Sylph.jpg');
+global.imagen0 = fs.readFileSync('./src/StarCore_logo.jpg');
+global.imagen = fs.readFileSync('./src/StarCore.jpg');
 global.imagen3 = 'https://telegra.ph/file/62fa3e30dc861a3fde73b.jpg';
 //--info
-global.botName = 'Sylph Bot - The best'
+global.botName = 'StarCore - Bot'
 global.fglog = 'https://i.ibb.co/1zdz2j3/logo.jpgs' 
 global.link_ = 'https://chat.whatsapp.com/CN3YieShy2S3LnVRJ7aPPm'
 
