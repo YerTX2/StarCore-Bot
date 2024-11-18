@@ -26,16 +26,16 @@
         "Sylphiette",
         "baileys-md"
     ],
-    "homepage": "https://github.com/FzTeis/Sylphiette",
+    "homepage": "https://github.com/YerTX2/StarCore-Bot",
     "author": {
         "name": "FzTeis"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/FzTeis/Sylphiette.git"
+        "url": "git+https://github.com/YerTX2/StarCore-Bot.git"
     },
     "bugs": {
-        "url": "https://github.com/FzTeis/Sylphiette/issues"
+        "url": "https://github.com/YerTX2/StarCore-Bot/issues"
     },
     "license": "MIT",
     "dependencies": {
