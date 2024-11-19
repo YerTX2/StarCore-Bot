@@ -154,7 +154,7 @@ opcion = await question(`╭${lineM}
 │ ${chalk.blueBright('┊')} ${chalk.italic.magenta("Escriba solo el numero de")}
 │ ${chalk.blueBright('┊')} ${chalk.italic.magenta("La opcion para conectarse")}
 │ ${chalk.blueBright('╰┄┈┅┈┄┈┅┈┄┅┈┄┈┅┄┈┅┈┄')} 
-│ ${chalk.italic.red(`𝒴𝓊𝓀𝒾_𝒮𝓊𝑜𝓊-𝐵𝑜𝓉 🌹`)}
+│ ${chalk.italic.red(`StarCore-Bot🌠`)}
 ╰${lineM}\n${chalk.bold.magentaBright('---> ')}`)
 if (!/^[1-2]$/.test(opcion)) {
 console.log(chalk.bold.redBright(`NO SE PERMITE NÚMEROS QUE NO SEAN ${chalk.bold.greenBright("1")} O ${chalk.bold.greenBright("2")}, TAMPOCO LETRAS O SÍMBOLOS ESPECIALES.\n${chalk.bold.yellowBright("CONSEJO: COPIE EL NÚMERO DE LA OPCIÓN Y PÉGUELO EN LA CONSOLA.")}`))
@@ -176,7 +176,7 @@ const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 mobile: MethodMobile, 
-browser: opcion == '1' ? ['Yuki_Suou-Bot', 'Edge', '20.0.04'] : methodCodeQR ? ['Yuki_Suou-Bot', 'Edge', '20.0.04'] : ["Ubuntu", "Chrome", "20.0.04"],
+browser: opcion == '1' ? ['Yuki_Suou-Bot', 'Edge', '20.0.04'] : methodCodeQR ? ['StarCore-Bot', 'Edge', '20.0.04'] : ["Ubuntu", "Chrome", "20.0.04"],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
