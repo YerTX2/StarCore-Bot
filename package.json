@@ -50,6 +50,7 @@
         "api-dylux": "^1.8.5",
         "aptoide-scraper": "^1.0.1",
         "awesome-phonenumber": "^3.4.0",
+        "google-libphonenumber": "3.2.38",
         "axios": "^1.1.2",
         "btch-downloader": "^2.3.2",
         "canvafy": "^7.2.0",
