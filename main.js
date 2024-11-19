@@ -139,7 +139,7 @@ opcion = '1'
 if (!methodCodeQR && !methodCode && !fs.existsSync(`./${authFile}/creds.json`)) {
 do {
 let lineM = '⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ 》'
-opcion = await question(chalk.bgBlack(chalk.bold.greenBright(`[ ℹ️ ] Seleccione una opción:\n1. Con código QR\n2. Con código de texto de 8 dígitos\n---> `)
+opcion = await question(chalk.bgBlack(chalk.bold.greenBright(`[ ℹ️ ] Seleccione una opción:\n1. Con código QR\n2. Con código de texto de 8 dígitos\n---> `)))
 if (!/^[1-2]$/.test(opcion)) {
 console.log('[ ❗ ] Por favor, seleccione solo 1 o 2.\n')
 }} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
@@ -160,7 +160,7 @@ const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 mobile: MethodMobile, 
-browser: opcion == '1' ? ['StarCore', 'Edge', '20.0.04'] : methodCodeQR ? ['StarCore', 'Edge', '20.0.04'] : ["Ubuntu", "Chrome", "20.0.04"],
+browser: opcion == '1' ? ['Sylphiette', 'Edge', '20.0.04'] : methodCodeQR ? ['Sylphiette', 'Edge', '20.0.04'] : ["Ubuntu", "Chrome", "20.0.04"],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
@@ -307,7 +307,7 @@ console.log(chalk.bold.red(`Archivo ${file} no borrado` + err))
 }
 
 async function connectionUpdate(update) {
-
+  
 
   const {connection, lastDisconnect, isNewLogin} = update;
   global.stopped = connection;
@@ -366,9 +366,9 @@ let isInit = true;
 
 let handler = await import('./handler.js');
 global.reloadHandler = async function(restatConn) {
-
+  
   try {
-
+   
     const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error);
     if (Object.keys(Handler || {}).length) handler = Handler;
   } catch (e) {
@@ -398,7 +398,7 @@ global.reloadHandler = async function(restatConn) {
   conn.bye = '👋 ¡Hasta luego!\n@user';
   conn.spromote = '*[ ℹ️ ] @user Fue promovido a administrador.*';
   conn.sdemote = '*[ ℹ️ ] @user Fue degradado de administrador.*';
-conn.sDesc = '*[ ℹ️ ] La descripción del grupo ha sido modificada.*';
+  conn.sDesc = '*[ ℹ️ ] La descripción del grupo ha sido modificada.*';
   conn.sSubject = '*[ ℹ️ ] El nombre del grupo ha sido modificado.*';
   conn.sIcon = '*[ ℹ️ ] Se ha cambiado la foto de perfil del grupo.*';
   conn.sRevoke = '*[ ℹ️ ] El enlace de invitación al grupo ha sido restablecido.*';
@@ -514,7 +514,7 @@ setInterval(async () => {
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSessionSB();
-
+  
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
@@ -530,7 +530,7 @@ arguments[0] = ""
 }
 originalConsoleMethod.apply(console, arguments)
 }}
-
+    
 async function isValidPhoneNumber(number) {
 try {
 number = number.replace(/\s+/g, '')
