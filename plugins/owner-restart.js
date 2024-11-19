@@ -1,6 +1,6 @@
 import { spawn } from 'child_process'
 let handler = async (m, { conn, isROwner, text }) => {
-    if (!process.send) throw 'Dont: node main.js\nDo: node index.js'
+    if (!process.send) throw 'Dont: node start.js\nDo: node index.js'
     if (conn.user.jid == conn.user.jid) {
     await m.reply(`🔄 ${mssg.restartBot}`)
     process.send('reset')
