@@ -8,7 +8,7 @@ isForwarded: false,
  externalAdReply: {  
  title: `¡Hi! This is my developer's number, just shoot me a message if you have any questions or want to chat about a potential collab.`, 
  body: botName, 
- sourceUrl: 'https://whatsapp.com/channel/0029Va6InNBFCCoM9xzKFG3G',
+ sourceUrl: 'https://whatsapp.com/channel/0029VankMyeBadmR9Ou0So3t',
  thumbnail: imagen,
  thumbnailUrl: 'https://telegra.ph/file/c96db6f7b43e28d45d8dc.jpg', 
  mediaType: 1,
