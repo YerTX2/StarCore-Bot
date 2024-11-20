@@ -8,10 +8,10 @@ let handler = async (m, { args, command, usedPrefix }) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (q.msg || q).mimetype || '';
   if (!mime) throw `✳️ ${mssg.replyImg}`;
- // if (!args[0]) throw ` \`\`\`[ 🌺 ] Ingresa un texto para guardar la imagen. Ejemplo:\n${usedPrefix + command} Sylph\`\`\``
+ // if (!args[0]) throw ` \`\`\`[ 🌺 ] Ingresa un texto para guardar la imagen. Ejemplo:\n${usedPrefix + command} StarCore\`\`\``
 
   let media = await q.download();
-  let tempFilePath = path.join(os.tmpdir(), 'Sylph');
+  let tempFilePath = path.join(os.tmpdir(), 'StarCore');
   fs.writeFileSync(tempFilePath, media);
 
   let form = new FormData();
