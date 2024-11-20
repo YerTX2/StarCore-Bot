@@ -10,7 +10,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 
   const videoInfo = search.all[0];
-  const body = `\`\`\`⊜─⌈ 📻 ◜YouTube Play◞ 📻 ⌋─⊜
+  const body = `\`\`\`⊜─⌈ 📻 ◜StarCore Play◞ 📻 ⌋─⊜
 
     ≡ Título : » ${videoInfo.title}
     ≡ Views : » ${videoInfo.views}
