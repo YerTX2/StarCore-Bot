@@ -65,7 +65,7 @@ const defaultMenu = {
   
   %sbot
   
-\`[ 🌱 ] ¿Some command has error? ¡Report it to the developer for a solution! 🦦\`
+\`[ 🌱 ] ¿Que Comando Tiene Error? ¡Reportalo Para Arreglarlo! 🦦\`
   
   乂────『 *I N F O   C M D* 』────乂 
   │ \`%totalfeatures\` _Commands available for use_
@@ -80,7 +80,7 @@ const defaultMenu = {
 
   ╭┈──────────────── ꒰ 🌺 ꒱
  │ *𖦹 ¡Remember that you can join the bot's official channel!*
-  ╰─┈➤ ‌ ${xx}Sylph - Is The Best${xx}\n
+  ╰─┈➤ ‌ ${xx}StarCore - Bot${xx}\n
 `.trimStart(),
   header: `╭──ꕥ *\`%category\`* ꕥ──`,
   body: `│✾ *\`%cmd\`* %isdiamond %isPremium\n`,
@@ -231,15 +231,15 @@ const defaultMenu = {
     
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-conn.sendMessage(m.chat, { video: { url: `https://telegra.ph/file/9cee79cfcd7e142b1f27d.mp4` }, gifPlayback: true, caption: text.trim(),
+conn.sendMessage(m.chat, { imagen: { url: `https://i.ibb.co/1mxxnxz/Sylph.jpg` }, gifPlayback: true, caption: text.trim(),
 contextInfo: {
 mentionedJid: conn.parseMention(text.trim()),
 isForwarded: true,
 forwardingScore: 999,
 externalAdReply: {
-title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
+title: conn.getName(m.sender) + ', Thanks for using StarCore, you can follow me on Instagram by clicking here.',
 body: author,
-thumbnailUrl: 'https://telegra.ph/file/dc68e52ff6227979070d0.jpg',
+thumbnailUrl: 'https://i.ibb.co/1mxxnxz/Sylph.jpg',
 sourceUrl: insta,
 mediaType: 1,
 renderLargerThumbnail: true
