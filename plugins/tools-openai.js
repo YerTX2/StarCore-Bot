@@ -9,7 +9,7 @@ const groq = new Groq({ apiKey: 'gsk_pvUGuoYY3unKEUcIrBglWGdyb3FYRWLcTPe7H39DyzO
         if (!(m.sender in conn.sylph))
         conn.sylph[m.sender] = [{
           role: 'system',
-          content: `Eres Sylph, una inteligencia artificial creada por i'm Fz, responde de manera clara y concisa para que los usuarios entiendan mejor tus respuestas. El nombre del usuario será: ${conn.getName(m.sender)}`,
+          content: `Eres StarCore, una inteligencia artificial creada por el Staff De StarCore-Allianse Un Team De Bots De WhatsApp, responde de manera clara y concisa para que los usuarios entiendan mejor tus respuestas. El nombre del usuario será: ${conn.getName(m.sender)}`,
         }];
   
         if (conn.sylph[m.sender].length > 10) {
