@@ -22,9 +22,9 @@ global.botnumber = "";
 global.confirmCode = "";
 global.owner = [
   ['51907376960', 'Star Yer🚩', true],
-  ['584148256527', 'Star Legendary🚩', true],
-  ['5493865860047', 'Star Kenisawa🚩', true],
   ['50557865603', 'Star WillZek🚩', true],
+  ['5493865860047', 'Star Kenisawa🚩', true],
+  ['584148256527', 'Star Legendary🚩', true],
   ['584120346669', 'Star Destroy🚩', true],
   ['5212431268546', 'Star Im Fz🚩', true],
   ['51913776697', 'Star Haru🚩', true],
