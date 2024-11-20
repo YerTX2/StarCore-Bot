@@ -24,9 +24,9 @@ global.owner = [
   ['51907376960', 'Star Yer🚩', true],
   ['584148256527', 'Star Legendary🚩', true],
   ['5493865860047', 'Star Kenisawa🚩', true],
-  ['5212431268546', 'Star Im Fz🚩', true],
-  ['584120346669', 'Star Destroy🚩', true],
   ['50557865603', 'Star WillZek🚩', true],
+  ['584120346669', 'Star Destroy🚩', true],
+  ['5212431268546', 'Star Im Fz🚩', true],
   ['51913776697', 'Star Haru🚩', true],
   ['50242073893', 'Star Jostin🚩', true]
 ] //Numeros de owner 
