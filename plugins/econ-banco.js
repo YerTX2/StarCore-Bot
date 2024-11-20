@@ -1,12 +1,12 @@
 let handler = async (m, { conn }) => {
   let user = global.db.data.users[m.sender]
-  let fz = '5212431268546'
+  let fz = '51907376960'
   const text = `
 ▧「 *👤 USER - BANK 🏦* 」
 │ 📛 *Nombre:* ${user.registered ? user.name : conn.getName(m.sender)}
 │ 💳 *Atm:* ${user.coin > 0 ? user.coin : 'No tienes monedas en este momento'}
 │ 🏛️ *Cuenta del banco:* ${user.bank} 💲 / ${user.coin} 💲
-│ 🌴 *User level:* ${user.level}
+│ 👑 *User level:* ${user.level}
 │ 🤖 *Experiencia:* ${user.exp}
 │ 🌟 *Status:* ${m.sender.split`@`[0] == fz ? 'Developer' : (user.premiumTime >= 1 ? 'Premium User' : 'Free User')}
 │ 📑 *Registered:* ${user.registered ? 'Yes':'No'}
