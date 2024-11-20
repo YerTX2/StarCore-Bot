@@ -1,20 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# Copyright 2012 Matt Martz
-# All Rights Reserved.
-#
-#    Licensed under the Apache License, Version 2.0 (the "License"); you may
-#    not use this file except in compliance with the License. You may obtain
-#    a copy of the License at
-#
-#         http://www.apache.org/licenses/LICENSE-2.0
-#
-#    Unless required by applicable law or agreed to in writing, software
-#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-#    License for the specific language governing permissions and limitations
-#    under the License.
-
 import csv
 import datetime
 import errno
@@ -228,7 +211,7 @@ else:
                     isinstance(data, unicode) and
                     encoding is not None):
                 errors = getattr(fp, "errors", None)
-if errors is None:
+                if errors is None:
                     errors = "strict"
                 data = data.encode(encoding, errors)
             fp.write(data)
@@ -458,7 +441,8 @@ if HTTPSConnection:
         def __init__(self, *args, **kwargs):
             source_address = kwargs.pop('source_address', None)
             timeout = kwargs.pop('timeout', 10)
-self._tunnel_host = None
+
+            self._tunnel_host = None
 
             HTTPSConnection.__init__(self, *args, **kwargs)
 
@@ -685,6 +669,8 @@ def build_user_agent():
     user_agent = ' '.join(ua_tuple)
     printer('User-Agent: %s' % user_agent, debug=True)
     return user_agent
+
+
 def build_request(url, data=None, headers=None, bump='0', secure=False):
     """Build a urllib2 request object
 
@@ -905,7 +891,7 @@ class HTTPUploader(threading.Thread):
             self._shutdown_event = FakeShutdownEvent()
 
     def run(self):
-request = self.request
+        request = self.request
         try:
             if ((timeit.default_timer() - self.starttime) <= self.timeout and
                     not event_is_set(self._shutdown_event)):
@@ -1105,7 +1091,8 @@ class Speedtest(object):
         self.servers = {}
         self.closest = []
         self._best = {}
-self.results = SpeedtestResults(
+
+        self.results = SpeedtestResults(
             client=self.config['client'],
             opener=self._opener,
             secure=secure,
@@ -1304,7 +1291,7 @@ self.results = SpeedtestResults(
                     try:
                         try:
                             root = ET.fromstring(serversxml)
-except ET.ParseError:
+                        except ET.ParseError:
                             e = get_exception()
                             raise SpeedtestServersError(
                                 'Malformed speedtest.net server list: %s' % e
@@ -1524,7 +1511,7 @@ except ET.ParseError:
 
         request_count = len(urls)
         requests = []
-for i, url in enumerate(urls):
+        for i, url in enumerate(urls):
             requests.append(
                 build_request(url, bump=i, secure=self._secure)
             )
@@ -1754,7 +1741,7 @@ def parse_args():
                              'information in JSON format. Speeds listed in '
                              'bit/s and not affected by --bytes')
     parser.add_argument('--list', action='store_true',
-help='Display a list of speedtest.net servers '
+                        help='Display a list of speedtest.net servers '
                              'sorted by distance')
     parser.add_argument('--server', type=PARSER_TYPE_INT, action='append',
                         help='Specify a server ID to test against. Can be '
@@ -1960,7 +1947,7 @@ def shell():
                 ((results.upload / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]),
                 quiet)
-        printer("\n...................................................................................\n▶︎ POWERED BY *OOKLA*")
+        printer("\n...................................................................................\n▶︎ POWERED BY *OOKLA*\n▶︎ Script By *FG98*")
     else:
         printer('Skipping upload test', quiet)
 
@@ -1983,6 +1970,8 @@ def shell():
 
     if args.share and not machine_format:
         printer('▶︎Compartir resultado: %s' % results.share())
+
+
 def main():
     try:
         shell()
