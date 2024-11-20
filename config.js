@@ -28,7 +28,8 @@ global.owner = [
   ['584120346669', 'Star Destroy🚩', true],
   ['5212431268546', 'Star Im Fz🚩', true],
   ['51913776697', 'Star Haru🚩', true],
-  ['50242073893', 'Star Jostin🚩', true]
+  ['50242073893', 'Star Jostin🚩', true],
+  ['50557865603', 'Niño Piña🚩', true]
 ] //Numeros de owner 
 global.colabs = [
   ['50242783087', '>\`\`\` I\'m Danny ~ 卐', true]
