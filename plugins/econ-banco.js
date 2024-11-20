@@ -20,8 +20,8 @@ let handler = async (m, { conn }) => {
  mediaUrl: insta,
     mediaType: 0, 
     description: insta,
-    title: `Sylph is the best`,
-    body: `SylphBot by >\`\` I\'m Fz~`,
+    title: `StarCore Alianse`,
+    body: `StarCore-Bot by >\`\` Staff\StarCore`,
     thumbnail: await (await fetch('https://telegra.ph/file/d6c1f6d09e777b258d709.jpg')).buffer(),
     sourceUrl: insta
 }
