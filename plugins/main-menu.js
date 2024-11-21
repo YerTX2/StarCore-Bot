@@ -239,12 +239,12 @@ forwardingScore: 999,
 externalAdReply: {
 title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
 body: author,
-thumbnailUrl: 'https://files.catbox.moe/w8egmu.mp4',
+thumbnailUrl: 'https://files.catbox.moe/82djkw.jpg',
 sourceUrl: insta,
 mediaType: 1,
 renderLargerThumbnail: true
 }}}, { quoted: fkontak })
-    m.react('🧝') 
+    m.react('🗡️') 
 
   } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error', m)
