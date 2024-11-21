@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname }) => {
 let ucpn = `${ucapan()}`
 let user = global.db.data.users[m.sender]
 let xx = '```'
-let fz = '5212431268546'
+let fz = '500000000'
 let sylph = '17146121800'
 let tags = {
   'main': 'Acerca dé',
@@ -76,7 +76,7 @@ const defaultMenu = {
   │ *𖦹 Diamond: 💎*
   ╰───────────────⳹
 
-\`https://whatsapp.com/channel/0029Va6InNBFCCoM9xzKFG3G\`
+\`https://whatsapp.com/channel/0029VankMyeBadmR9Ou0So3t\`
 
   ╭┈──────────────── ꒰ 🌺 ꒱
  │ *𖦹 ¡Remember that you can join the bot's official channel!*
@@ -244,7 +244,7 @@ sourceUrl: insta,
 mediaType: 1,
 renderLargerThumbnail: true
 }}}, { quoted: fkontak })
-    m.react('🧝') 
+    m.react('🏆') 
 
   } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error', m)
