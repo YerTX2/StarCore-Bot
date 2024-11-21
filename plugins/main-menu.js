@@ -3,7 +3,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   if (usedPrefix == 'a' || usedPrefix == 'A') return;
   try {
     const pp = imagen4;
-    const img = './Menu2.jpg';
+    const img = 'https://i.ibb.co/XLGftJk/StarCore.jpg';
     const d = new Date(new Date + 3600000);
     const locale = 'es';
     const week = d.toLocaleDateString(locale, {weekday: 'long'});
