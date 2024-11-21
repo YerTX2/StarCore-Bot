@@ -61,6 +61,7 @@ global.insta = 'https://www.instagram.com/'
 global.imagen0 = fs.readFileSync('./src/StarCore_logo.jpg');
 global.imagen = fs.readFileSync('./src/StarCore.jpg');
 global.imagen3 = 'https://telegra.ph/file/62fa3e30dc861a3fde73b.jpg';
+global.catalogo = imagen0
 //--info
 global.botName = 'StarCore - Bot'
 global.fglog = 'https://i.ibb.co/1zdz2j3/logo.jpgs' 
