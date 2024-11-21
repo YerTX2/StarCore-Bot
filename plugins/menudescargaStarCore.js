@@ -23,7 +23,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'descargasStarcore': 'menudescarga',
 }
-let img = 'https://tinyurl.com/2xragovw'
+let img = 'https://files.catbox.moe/udkpc3.jpg'
 
   try {
           // DEFAULT MENU
