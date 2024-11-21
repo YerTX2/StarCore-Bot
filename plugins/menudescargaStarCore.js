@@ -196,7 +196,7 @@ await m.react('🔱')
 }
 handler.help = ['menudescarga']
 handler.tags = ['main']
-handler.command = ['menudescarga']
+handler.command = ['menudescarga', 'menudl']
 
 export default handler
 
