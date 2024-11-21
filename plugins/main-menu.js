@@ -65,7 +65,7 @@ const defaultMenu = {
   
   %sbot
   
-\`[ 🌱 ] ¿Some command has error? ¡Report it to the developer for a solution! 🦦\`
+\`[ 👑 ] ¿Que Comando Tiene Error? ¡Reportalo al owner para darle solución ! 🦦\`
   
   乂────『 *I N F O   C M D* 』────乂 
   │ \`%totalfeatures\` _Commands available for use_
@@ -223,7 +223,7 @@ mentionedJid: conn.parseMention(text.trim()),
 isForwarded: true,
 forwardingScore: 999,
 externalAdReply: {
-title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
+title: conn.getName(m.sender) + ', Gracias Por Usar A StarCore, you can follow me on Instagram by clicking here.',
 body: author,
 thumbnailUrl: 'https://i.ibb.co/PGLsJVd/images-4.jpg',
 sourceUrl: insta,
