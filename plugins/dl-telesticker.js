@@ -18,7 +18,7 @@ var handler = async (m, { conn, args }) => {
 	} else throw `\`\`\`[ 🌃 ] Ingresa una url para descargar.\`\`\``
 }
 handler.help = ['telesticker']
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.command = /^(telestic?ker|stic?kertele)$/i
 handler.limit = true
 
