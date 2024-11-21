@@ -24,7 +24,7 @@ let tags = {
 'group': 'menugrupo',
 }
 
-let img = 'https://tinyurl.com/2xragovw'
+let img = 'https://i.ibb.co/B6fLfMn/StarCore.jpg'
   try {
           // DEFAULT MENU
       let dash = global.dashmenu
