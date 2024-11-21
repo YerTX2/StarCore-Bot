@@ -187,7 +187,7 @@ await m.react('🔱')
         mediaType: 1,
         renderLargerThumbnail: true
         }}},
-        { quoted: estilo})
+        { quoted: fkon})
 
   } catch (e) {
     conn.reply(m.chat, 'Lo siento, el menú tiene algun error .', m)
