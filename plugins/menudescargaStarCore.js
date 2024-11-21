@@ -13,7 +13,7 @@ const defaultMenu = {
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ──ׄ*
 %readmore
 `.trimStart(),
-  header: '┏━━━⪩「 *_`%category`_* 」⪨',
+  header: '┏━━⪩「 *_`%category`_* 」⪨',
   body: '┃✧ %cmd\n',
   footer: '┗━━━━━━━━━━━━━━━━━⪩\n',
   after: ``,
