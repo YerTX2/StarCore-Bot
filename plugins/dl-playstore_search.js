@@ -26,6 +26,6 @@ let handler = async (m, { conn, text }) => {
   m.reply(res, null, opt);
 };
 handler.help = ['playstore'];
-handler.tags = ['dl'];
+handler.tags = ['descargasStarcore'];
 handler.command = /^(playstore)$/i;
 export default handler;
