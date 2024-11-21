@@ -26,7 +26,7 @@ let tags = {
   'nable': 'En/Disable opciones', 
   'nime': 'Anime',
   'rnime': 'Anime React',
-  'dl': 'Donwloads',
+  'descargasStarcore': 'descargasStarcore',
   'tools': 'Tools',
   'fun': 'Fun / Random',
   'cmd': 'Database',
