@@ -10,7 +10,7 @@ const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/b
 const defaultMenu = {
   before: `“ʜᴏʟᴀ *%name*, a qui esta todas las descargas 🗡️"
 
-━━━━━━ ◦ ❖ ◦ ━━━━━━
+*─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ──ׄ*
 %readmore
 `.trimStart(),
   header: '┏━━━⪩「 *_`%category`_* 」⪨',
