@@ -78,22 +78,8 @@ const defaultMenu = {
 
 \`https://whatsapp.com/channel/0029VankMyeBadmR9Ou0So3t\`
 
-  ╭┈──────────────── ꒰ 🌺 ꒱
- │ *𖦹 ¡Remember that you can join the bot's official channel!*
-  ╰─┈➤ ‌ ${xx}Sylph - Is The Best${xx}\n
-`.trimStart(),
-  header: `╭──ꕥ *\`%category\`* ꕥ──`,
-  body: `│✾ *\`%cmd\`* %isdiamond %isPremium\n`,
-  footer: `╰─❑\n`,
-  after: `
-╭───❑ 「 \`INFORMACION\` 」 ❑───
-│ Si quieres unir el bot a tu grupo,
-│ contacta con el creador usando:
-│ #owner o bien, toca el @tag del 
-│ menú principal.
-╰─❑ ${wm}
-`,
-}
+  
+
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let d = new Date(new Date + 3600000)
