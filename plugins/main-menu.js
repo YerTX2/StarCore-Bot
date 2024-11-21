@@ -38,7 +38,7 @@ let tags = {
 const defaultMenu = {
   before: `
 「 ${wm} ㊎ 」\n
- ⏍ Hello @${m.sender.split`@`[0]}, ${ucpn}
+ ⏍ Hola🥷 @${m.sender.split`@`[0]}, ${ucpn}
  
   乂─────『 *\`U  S  E  R\`* 』─────乂
    *|* • *Usuario:* %name
@@ -65,18 +65,18 @@ const defaultMenu = {
   
   %sbot
   
-\`[ 🌱 ] ¿Some command has error? ¡Report it to the developer for a solution! 🦦\`
+\`[ ❤️ ] ¿UN BOT CON MULTIPLIQUES FUNCIONES DEL TEAM! ❤️\`
   
   乂────『 *I N F O   C M D* 』────乂 
-  │ \`%totalfeatures\` _Commands available for use_
+  │ \`%totalfeatures\` _Comando invalido_
   ╰───────────────⳹
   
   乂────『 *I N F O   M E N U* 』────乂 
   │ *𖦹 Premium: 🪙*
-  │ *𖦹 Diamond: 💎*
+  │ *𖦹 Diamante: 💎*
   ╰───────────────⳹
 
-\`https://whatsapp.com/channel/0029Va6InNBFCCoM9xzKFG3G\`
+\`https://whatsapp.com/channel/0029VankMyeBadmR9Ou0So3t`
 
   ╭┈──────────────── ꒰ 🌺 ꒱
  │ *𖦹 ¡Remember that you can join the bot's official channel!*
