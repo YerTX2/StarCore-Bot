@@ -12,7 +12,7 @@ conn.sendFile(m.chat, `${play}`, `tiktok.mp4`, `*🌴 ${nickname}:  ${title}*\n 
 m.react(done)
 }
 handler.help = ['tiktok']
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.command = /^(tt|tiktok)(dl|nowm)?$/i
 handler.diamond = 4
 export default handler
