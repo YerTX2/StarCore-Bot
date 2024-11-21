@@ -21,7 +21,7 @@ let handler = async (m, { conn, text, args }) => {
 }
 }
 handler.help = ['tiktokstalk']
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.command = /^t(tstalk|iktokstalk)$/i
 
 export default handler
