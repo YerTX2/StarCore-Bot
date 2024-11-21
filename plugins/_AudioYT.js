@@ -37,7 +37,7 @@ let handler = async (m, { conn, text, isPrems, isOwner, usedPrefix, command }) =
 }
 
 handler.help = ['Audio']
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.customPrefix = /^(Audio|audio)/
 handler.command = new RegExp
 export default handler
