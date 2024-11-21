@@ -57,7 +57,7 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
   }
 };
 handler.help = ['mediafire'].map((v) => v + ' <url>');
-handler.tags = ['dl'];
+handler.tags = ['descargasStarcore'];
 handler.command = /^(mediafire|mediafiredl|dlmediafire)$/i;
 export default handler;
 
