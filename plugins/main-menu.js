@@ -89,8 +89,7 @@ const defaultMenu = {
 ╭───❑ 「 \`INFORMACION\` 」 ❑───
 │ Si quieres unir el bot a tu grupo,
 │ contacta con el creador usando:
-│ #owner o bien, toca el @tag del 
-│ menú principal.
+│ #owner o bien, toca el @tag.
 ╰─❑ ${wm}
 `,
 }
