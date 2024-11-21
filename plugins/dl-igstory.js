@@ -11,7 +11,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   m.react(done)
 }
 handler.help = ['igstory']
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.command = ['igstory', 'ighistoria'] 
 handler.diamond = true
 
