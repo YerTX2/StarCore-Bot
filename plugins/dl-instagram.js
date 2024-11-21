@@ -6,7 +6,7 @@ conn.sendFile(m.chat, res.result[0].url, 'Video.mp4', '*🌴 Resultado.*', m)
     
 }
 handler.help = ['instagram']
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.command = ['ig', 'igdl', 'instagram', 'igimg', 'igvid']
 handler.diamond = true
 export default handler
