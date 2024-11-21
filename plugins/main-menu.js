@@ -13,27 +13,27 @@ let xx = '```'
 let fz = '5212431268546'
 let sylph = '17146121800'
 let tags = {
-  'main': 'Acerca dé',
-  'bebot': 'Sub - Bots',
-  'game': 'Juegos',
-  'econ': 'Level and Economy',
-  'rg': 'Registro',
-  'sticker': 'Stickers',
-  'img': 'Imagen',
-  'maker': 'Maker',
-  'prem': 'Premium',
-  'group': 'Gestión de grupos',
-  'nable': 'En/Disable opciones', 
-  'nime': 'Anime',
-  'rnime': 'Anime React',
-  'descargasStarcore': 'descargasStarcore',
-  'tools': 'Tools',
-  'fun': 'Fun / Random',
-  'cmd': 'Database',
-  'nsfw': 'NSFW +18',
-  'ansfw': 'NSFW Anime', 
-  'owner': 'Developer', 
-  'advanced': 'Advanced'
+  'main': 'INFO',
+  'bebot': 'SUBBOTS/JADIBOT',
+  'game': 'JUEGOS',
+  'econ': 'NIVEL ECONOMIA',
+  'rg': 'REGISTROS',
+  'sticker': 'STICKERS',
+  'img': 'IMAGENES',
+  'maker': 'MAKER',
+  'prem': 'PREMIUMS',
+  'group': 'ADM GRUPOS',
+  'nable': 'ON/OF', 
+  'nime': 'ANIME',
+  'rnime': 'ANIME REACCION',
+  'descargasStarcore': 'MENU DESCARGAS',
+  'tools': 'TOOSL',
+  'fun': 'JUEGOS / RAROS',
+  'cmd': 'BASE DE DATOS',
+  'nsfw': '+18',
+  'ansfw': '+18 ANIME', 
+  'owner': 'STAFF', 
+  'advanced': 'AVANCE'
 }
 const defaultMenu = {
   before: `
@@ -41,26 +41,26 @@ const defaultMenu = {
  ⏍ Hello @${m.sender.split`@`[0]}, ${ucpn}
  
   乂─────『 *\`U  S  E  R\`* 』─────乂
-   *|* • *Name:* %name
-   *|* • *Coins:* %coin
+   *|* • *Usuario:* %name
+   *|* • *Monedas:* %coin
    *|* • *Role:* %role
-   *|* • *Level:* %level
+   *|* • *nivel:* %level
    *|* • *Xp:* %exp / %maxexp
    *|* • *Total Xp:* %totalexp
    *|* • *¿VIP?:* *${global.db.data.users[m.sender].premiumTime > 1 ? 'Si': 'No'}*
   ╰───────────────⳹
  
   乂─────『 *\`I  N  F  O\`* 』─────乂
-   *|* • *Bot Name:* ${botName}
-   *|* • *Platform:* %platform
+   *|* • *Bot:* ${botName}
+   *|* • *Sistema:* %platform
    *|* • *Type:* NodeJs
-   *|* • *Creator:* EQUIPO STARCORE
+   *|* • *Creadores:* EQUIPO STARCORE
    *|* • *Baileys:* Multi - Device
    *|* • *Prefix:* [ *%_p* ]
-   *|* • *Uptime:* %muptime
-   *|* • *Bot status:* %mode
+   *|* • *Tiempo:* %muptime
+   *|* • *Bot estado:* %mode
    *|* • *Database:* %rtotalreg - %totalreg
-   *|* • *Status:* ${m.sender.split`@`[0] == fz  ? 'Developer' : m.sender.split`@`[0] == sylph ? 'Official bot (In development)' :  (user.premiumTime >= 1 ? 'VIP User' : 'Free User')}
+   *|* • *Estado:* ${m.sender.split`@`[0] == fz  ? 'Developer' : m.sender.split`@`[0] == sylph ? 'Official bot (In development)' :  (user.premiumTime >= 1 ? 'VIP User' : 'Free User')}
   ╰───────────────⳹
   
   %sbot
