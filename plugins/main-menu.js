@@ -1,86 +1,105 @@
 import { promises } from 'fs'
+import fs from 'fs'
+import moment from 'moment-timezone'
 import { join } from 'path'
 import fetch from 'node-fetch'
+import os from 'os'
+import { getDevice } from '@whiskeysockets/baileys'
 import { xpRange } from '../lib/levelling.js'
-import axios from 'axios';
-
-let Styles = (text, style = 1) => {
-  var xStr = 'abcdefghijklmnopqrstuvwxyz1234567890'.split('');
-  var yStr = Object.freeze({
-    1: 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘqʀꜱᴛᴜᴠᴡxʏᴢ1234567890'
-  });
-  var replacer = [];
-  xStr.map((v, i) => replacer.push({
-    original: v,
-    convert: yStr[style].split('')[i]
-  }));
-  var str = text.toLowerCase().split('');
-  var output = [];
-  str.map(v => {
-    const find = replacer.find(x => x.original == v);
-    find ? output.push(find.convert) : output.push(v);
-  });
-  return output.join('');
-};
-
+let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname }) => {
+let ucpn = `${ucapan()}`
+let user = global.db.data.users[m.sender]
+let xx = '```'
+let fz = '5212431268546'
+let sylph = '17146121800'
 let tags = {
-  'pago': '💲 ᴘʀᴇᴄɪᴏ ᴛᴀɴᴊɪʀᴏ 💲',
-  'main': '✨ ɪɴꜰᴏ ʙᴏᴛ ✨',
-  'menu': '👑 ᴍᴇɴᴜ 👑',
-  'free': '👾 ꜰʀᴇᴇ ꜰɪʀᴇ 👾',
-  'buscador': '🔎 ʙᴜꜱQᴜᴇᴅᴀꜱ 🔎',
-  'search': '🔍 ꜱᴇᴀʀᴄʜ 🔍',
-  'game': '🎊 ᴅɪᴠᴇʀꜱɪᴏɴ 🎊',
-  'rpg': '💻 ʀᴘɢ 💻',
-  'rg': '🛡️ ʀᴇɢɪꜱᴛʀᴏ 🛡️',
-  'xp': '⭐ ᴇxᴘ ⭐',
-  'sticker': '💢 ꜱᴛɪᴄᴋᴇʀꜱ 💢',
-  'anime': '💣ᴀɴɪᴍᴇꜱ💣',
-  'database': '💥ᴅᴀᴛᴀʙᴀꜱᴇ💥',
-  'fix': ', ✋🏼 ꜰɪxᴍꜱɢᴇꜱᴘᴇʀᴀ ✋🏼',
-  'grupo': '👥 ɢʀᴜᴘᴏꜱ 👥',
-  'nable': '👀 ᴏɴ / ᴏꜰꜰ 👀', 
-  'dl': '🎵 ᴅᴇꜱᴄᴀʀɢᴀꜱ 🎵',
-  'fun': '⚒️ ʜᴇʀʀᴀᴍɪᴇɴᴛᴀꜱ ⚒️',
-  'info': '⚔️ ɪɴꜰᴏʀᴍᴀᴄɪᴏɴ ⚔️',
-  'nsfw': '🔞 ɴꜱꜰᴡ 🔞', 
-  'owner': '👑 ᴄʀᴇᴀᴅᴏʀ 👑',
-  'mods': '👤 ꜱᴛᴀꜰꜰ 👤',
-  'audio': '🎶 ᴀᴜᴅɪᴏꜱ 🎶', 
-  'ai': '🔰 ᴀɪ ʙᴏᴛ 🔰',
-  'convertir': '⭕ ᴄᴏɴᴠᴇʀᴛɪᴅᴏʀᴇꜱ ⭕',
-  'audios': '🔊 ᴀᴜᴅɪᴏꜱ 🔊',
+  'main': 'INFO',
+  'bebot': 'SUBBOTS/JADIBOT',
+  'game': 'JUEGOS',
+  'econ': 'NIVEL ECONOMIA',
+  'rg': 'REGISTROS',
+  'sticker': 'STICKERS',
+  'img': 'IMAGENES',
+  'maker': 'MAKER',
+  'prem': 'PREMIUMS',
+  'group': 'ADM GRUPOS',
+  'nable': 'ON/OF', 
+  'nime': 'ANIME',
+  'rnime': 'ANIME REACCION',
+  'tools': 'TOOSL',
+  'fun': 'JUEGOS / RAROS',
+  'cmd': 'BASE DE DATOS',
+  'nsfw': '+18',
+  'ansfw': '+18 ANIME', 
+  'owner': 'STAFF', 
+  'advanced': 'AVANCE'
 }
-
 const defaultMenu = {
-  before: `Hola \`%name\` soy TanjiroBot-MD, %greeting
+  before: `
+「 ${wm} ㊎ 」\n
+ ⏍ Hola🥷 @${m.sender.split`@`[0]}, ${ucpn}
+ 
+  乂─────『 *\`U  S  E  R\`* 』─────乂
+   *|* • *Usuario:* %name
+   *|* • *Monedas:* %coin
+   *|* • *Role:* %role
+   *|* • *nivel:* %level
+   *|* • *Xp:* %exp / %maxexp
+   *|* • *Total Xp:* %totalexp
+   *|* • *¿VIP?:* *${global.db.data.users[m.sender].premiumTime > 1 ? 'Si': 'No'}*
+  ╰───────────────⳹
+ 
+  乂─────『 *\`I  N  F  O\`* 』─────乂
+   *|* • *Bot:* ${botName}
+   *|* • *Sistema:* %platform
+   *|* • *Type:* NodeJs
+   *|* • *Creadores:* EQUIPO STARCORE
+   *|* • *Baileys:* Multi - Device
+   *|* • *Prefix:* [ *%_p* ]
+   *|* • *Tiempo:* %muptime
+   *|* • *Bot estado:* %mode
+   *|* • *Database:* %rtotalreg - %totalreg
+   *|* • *Estado:* ${m.sender.split`@`[0] == fz  ? 'Developer' : m.sender.split`@`[0] == sylph ? 'Official bot (In development)' :  (user.premiumTime >= 1 ? 'VIP User' : 'Free User')}
+  ╰───────────────⳹
+  
+  %sbot
+  
+\`[ ❤️ ] ¿UN BOT CON MULTIPLIQUES FUNCIONES DEL TEAM! ❤️\`
+  
+  乂────『 *I N F O   C M D* 』────乂 
+  │ \`%totalfeatures\` _Comando invalido_
+  ╰───────────────⳹
+  
+  乂────『 *I N F O   M E N U* 』────乂 
+  │ *𖦹 Premium: 🪙*
+  │ *𖦹 Diamante: 💎*
+  ╰───────────────⳹
 
-乂 _\`ᴜ\` \`ꜱ\` \`ᴜ\` \`ᴀ\` \`ʀ\` \`ɪ\` \`ᴏ\`_ 乂
+\`https://whatsapp.com/channel/0029VankMyeBadmR9Ou0So3t`
 
-• _\`ɴᴏᴍʙʀᴇ\`_ :: %name
-• _\`ʙᴏᴛ\`_ :: TanjiroBot-MD
-• _\`ᴍᴏᴅᴏ\`_ :: Público
-• _\`ᴀᴄᴛɪᴠᴏ\`_ :: %muptime
-• _\`ᴜꜱᴜᴀʀɪᴏꜱ\`_ :: %totalreg
-• _\`ᴄᴏʀᴀᴢᴏɴᴇꜱ\`_ :: %corazones
-• _\`ɴɪᴠᴇʟ\`_ :: %level
-
-乂 _\`ᴄ\` \`ᴏ\` \`ᴍ\` \`ᴀ\` \`ɴ\` \`ᴅ\` \`ᴏ\` \`ꜱ\`_ 乂
+  ╭┈──────────────── ꒰ 🌺 ꒱
+ │ *𖦹 ¡Remember that you can join the bot's official channel!*
+  ╰─┈➤ ‌ ${xx}Sylph - Is The Best${xx}\n
 `.trimStart(),
-  header: '╭─(❀)❝┊ *_`%category`_* ┊❝(❀)',
-  body: '┊➧ %cmd\n',
-  footer: '╰───────────── –\n',
-  after: `> By TanjiroBot-Md`,
+  header: `╭──ꕥ *\`%category\`* ꕥ──`,
+  body: `│✾ *\`%cmd\`* %isdiamond %isPremium\n`,
+  footer: `╰─❑\n`,
+  after: `
+╭───❑ 「 \`INFORMACION\` 」 ❑───
+│ Si quieres unir el bot a tu grupo,
+│ contacta con el creador usando:
+│ #owner o bien, toca el @tag.
+╰─❑ ${wm}
+`,
 }
-let ppp = 'https://qu.ax/CkXP.jpg'
-let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-    let { exp, corazones, level, role } = global.db.data.users[m.sender]
-    let { min, xp, max } = xpRange(level, global.multiplier)
-    let name = await conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
     let locale = 'es'
+    // d.getTimeZoneOffset()
+    // Offset -420 is 18.00
+    // Offset    0 is  0.00
+    // Offset  420 is  7.00
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
@@ -107,8 +126,33 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         setTimeout(resolve, 1000)
       }) * 1000
     }
-    let muptime = clockString(_muptime)
+    let glb = global.db.data.users
+   let usrs = glb[m.sender]
+   let tag = `@${m.sender.split("@")[0]}`
+   let mode = global.opts["self"] ? "Private" : "Public"
+
+   let {
+ age,
+ exp,
+ diamond,
+ level,
+ role,
+ registered,
+ coin
+   } = glb[m.sender]
+   let {
+ min,
+ xp,
+ max
+   } = xpRange(level, global.multiplier)
+   let name = await conn.getName(m.sender)
+   let premium = glb[m.sender].premiumTime
+   let prems = `${premium > 0 ? "Premium": "Free"}`
+   let platform = os.platform()
+       let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
+   let totalfeatures = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
+
     let totalreg = Object.keys(global.db.data.users).length
     let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
@@ -116,7 +160,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
         tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
         prefix: 'customPrefix' in plugin,
-        corazones: plugin.corazones,
+        diamond: plugin.diamond,
         premium: plugin.premium,
         enabled: !plugin.disabled,
       }
@@ -130,16 +174,16 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let header = conn.menu.header || defaultMenu.header
     let body = conn.menu.body || defaultMenu.body
     let footer = conn.menu.footer || defaultMenu.footer
-    let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : `Powered by https://wa.me/${conn.user.jid.split`@`[0]}`) + defaultMenu.after
+    let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : `• Powered by https://wa.me/${conn.user.jid.split`@`[0]}`) + defaultMenu.after
     let _text = [
       before,
       ...Object.keys(tags).map(tag => {
         return header.replace(/%category/g, tags[tag]) + '\n' + [
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
-              return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%isdiamond/g, menu.diamond ? '◜🪙◞' : '')
-                .replace(/%isPremium/g, menu.premium ? '◜🎫◞' : '')
+              return body.replace(/%cmd/g, menu.prefix ? help : '%_p' + help)
+                .replace(/%isdiamond/g, menu.diamond ? '💎' : '')
+                .replace(/%isPremium/g, menu.premium ? '🪙' : '')
                 .trim()
             }).join('\n')
           }),
@@ -149,115 +193,93 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       after
     ].join('\n')
     let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
-let replace = {
-'%': '%',
-p: _p, uptime, muptime,
-me: conn.getName(conn.user.jid),
-taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
-npmname: _package.name,
-npmdesc: _package.description,
-version: _package.version,
-exp: exp - min,
-maxexp: xp,
-botofc: (conn.user.jid == global.conn.user.jid ? '👾 𝙴𝚂𝚃𝙴 𝙴𝚂 𝙴𝙻 𝙱𝙾𝚃 𝙾𝙵𝙲' : `👾 𝚂𝚄𝙱-𝙱𝙾𝚃 𝙳𝙴: Wa.me/${global.conn.user.jid.split`@`[0]}`), 
-totalexp: exp,
-xp4levelup: max - exp,
-github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
-greeting, level, corazones, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
-readmore: readMore
-}
-text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+    let replace = {
+    '%': '%',
+    uptime,
+ muptime,
+ me: conn.getName(conn.user.jid),
+ npmname: _package.name,
+ npmdesc: _package.description,
+ version: _package.version,
+ exp: exp - min,
+ maxexp: xp,
+ totalexp: exp,
+ xp4levelup: max - exp,
+ sbot: (conn.user.jid == global.conn.user.jid ? '' : ` [🍁] Sub-Bot de:\nwa.me/${global.conn.user.jid.split`@`[0]}`), 
+ tag,
+ ucpn,
+ platform,
+ mode,
+ _p,
+ coin,
+ age,
+ tag,
+ name,
+ prems,
+ level,
+ diamond,
+ name,
+ totalreg,
+ rtotalreg,
+ totalfeatures,
+ role,
+ readmore: readMore
+    }
 
-const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://qu.ax/CkXP.jpg')
+    text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-  let category = "video"
-  const db = './media/database/db.json'
-  const db_ = JSON.parse(fs.readFileSync(db))
-  const random = Math.floor(Math.random() * db_.links[category].length)
-  const rlink = db_.links[category][random]
-  global.vid = rlink
-  const response = await fetch(vid)
-  const gif = await response.buffer()
- // const img = imagen1
-
-await m.react('👾') 
-// await conn.reply(m.chat, '*ꪹ͜𓂃͡𝗖𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗠𝗲𝗻𝘂 𝗗𝗲 𝗹𝗮 𝗕𝗼𝘁...𓏲੭*', fakegif3, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: packname, body: '👾 ¡Génesis la mejor Bot!', sourceUrl: canal, thumbnail: icons }}})
-
-// await conn.reply(m.chat, '🍟 Enviando el menú.....', m, rcanal)
-let imagen_menu = await getBuffer(ppp);
-await conn.sendFile(m.chat, imagen_menu, 'menu.jpg', Styles(text.trim()), fakegif3, null, fake)
-
-/* await conn.sendButton(m.chat, text, '@usxr_angelito0', ppp, [
-['', '']], null, [['CANAL 🐈‍⬛', `${canal}`], ['CANAL 2', `wa.me/59168683798`]], m) */
+conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/w8egmu.mp4` }, gifPlayback: true, caption: text.trim(),
+contextInfo: {
+mentionedJid: conn.parseMention(text.trim()),
+isForwarded: true,
+forwardingScore: 999,
+externalAdReply: {
+title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
+body: author,
+thumbnailUrl: 'https://files.catbox.moe/82djkw.jpg',
+sourceUrl: insta,
+mediaType: 1,
+renderLargerThumbnail: true
+}}}, { quoted: fkontak })
+    m.react('🗡️') 
 
   } catch (e) {
-    conn.reply(m.chat, '🔵 Lo sentimos, el menú tiene un error', m, rcanal, )
+    conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error', m)
     throw e
   }
 }
-handler.help = ['allmenu']
-handler.tags = ['menu']
-handler.command = ['menuall', 'allmenú', 'allmenu'] 
+handler.command = ['menu', 'help', 'menú', 'commands', 'comandos', '?']
 handler.register = true
-
 export default handler
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
 function clockString(ms) {
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+  return [d, 'd ', h, 'h ', m, 'm '].map(v => v.toString().padStart(2, 0)).join('')
 }
-
-  var ase = new Date();
-  var hour = ase.getHours();
-switch(hour){
-  case 0: hour = 'Buenas noches 🌙'; break;
-  case 1: hour = 'Buenas noches 💤'; break;
-  case 2: hour = 'Buenas noches 🦉'; break;
-  case 3: hour = 'Buenas noches ✨'; break;
-  case 4: hour = 'Buenos dias 👾'; break;
-  case 5: hour = 'Buenos dias 🌅'; break;
-  case 6: hour = 'Buenos dias 🌄'; break;
-  case 7: hour = 'Buenos dias 🌅'; break;
-  case 8: hour = 'Buenos dias 👾'; break;
-  case 9: hour = 'Buenos dias ✨'; break;
-  case 10: hour = 'Buenos dias 🌞'; break;
-  case 11: hour = 'Buenos dias 🌨'; break;
-  case 12: hour = 'Buenos dias ❄'; break;
-  case 13: hour = 'Buenos dias 🌤'; break;
-  case 14: hour = 'Buenas tardes 🌇'; break;
-  case 15: hour = 'Buenas tardes 🥀'; break;
-  case 16: hour = 'Buenas tardes 🌹'; break;
-  case 17: hour = 'Buenas tardes 🌆'; break;
-  case 18: hour = 'Buenas noches 🌙'; break;
-  case 19: hour = 'Buenas noches 🌃'; break;
-  case 20: hour = 'Buenas noches 🌌'; break;
-  case 21: hour = 'Buenas noches 🌃'; break;
-  case 22: hour = 'Buenas noches 🌙'; break;
-  case 23: hour = 'Buenas noches 🌃'; break;
+function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]
 }
-  var greeting = hour;
-
-/*const getBuffer = async (url, options) => {
-try {
-const res = await axios({
-method: 'get',
-url,
-headers: {
-'DNT': 1,
-'Upgrade-Insecure-Request': 1,
-},
-...options,
-responseType: 'arraybuffer',
-});
-return res.data;
-} catch (e) {
-console.log(`Error : ${e}`);
+function ucapan() {
+const time = moment.tz('America/Los_Angeles').format('HH')
+let res = ""
+if (time >= 4) {
+res = "Good morning. ⛅"
 }
-};*/
+if (time >= 10) {
+res = "Good afternoon. 🌇"
+}
+if (time >= 15) {
+res = "Good afternoon. 🌇"
+}
+if (time >= 18) {
+res = "Good night. 🌃"
+}
+return res
+}
