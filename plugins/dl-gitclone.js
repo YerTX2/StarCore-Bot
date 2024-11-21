@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     m.react(done)
 }
 handler.help = ['gitclone <url>']
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.command = ['gitclone'] 
 handler.diamond = true
 
