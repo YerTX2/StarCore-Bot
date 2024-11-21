@@ -27,7 +27,7 @@ m.react(rwait)
     }
 }
 handler.help = ['facebook']
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.command = ['fb', 'fbdl', 'facebook']
 handler.diamond = true
 export default handler
