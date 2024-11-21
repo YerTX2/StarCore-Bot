@@ -15,7 +15,7 @@ const defaultMenu = {
 `.trimStart(),
   header: '┏━━⪩「 *_`%category`_* 」⪨',
   body: '┃✧ %cmd\n',
-  footer: '┗━━━━━━━━━━━━━━━━━⪩\n',
+  footer: '┗━━━━━━━━━━━━━━━━⪩\n',
   after: ``,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
