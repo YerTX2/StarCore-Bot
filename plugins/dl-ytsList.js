@@ -66,7 +66,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 };
 
 handler.help = ['ytslist'];
-handler.tags = ['dl'];
+handler.tags = ['descargasStarcore'];
 handler.command = ['ytslist'];
 
 export default handler;
