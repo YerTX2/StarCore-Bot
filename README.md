@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://telegra.ph/file/5a2eb62dca1eafb952f31.jpg" alt="SonGOKU" width="900"/>
+<img src="https://i.ibb.co/B6fLfMn/StarCore.jpg" alt="SonGOKU" width="900"/>
 </p>
 
 
