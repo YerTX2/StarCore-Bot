@@ -54,7 +54,7 @@ const defaultMenu = {
    *|* • *Bot Name:* ${botName}
    *|* • *Platform:* %platform
    *|* • *Type:* NodeJs
-   *|* • *Creator:* @${fz}
+   *|* • *Creator:* EQUIPO STARCORE
    *|* • *Baileys:* Multi - Device
    *|* • *Prefix:* [ *%_p* ]
    *|* • *Uptime:* %muptime
