@@ -76,9 +76,9 @@ const defaultMenu = {
   │ *𖦹 Diamond: 💎*
   ╰───────────────⳹
 
-\`https://whatsapp.com/channel/0029VankMyeBadmR9Ou0So3t\`
+\`https://whatsapp.com/channel/0029Va6InNBFCCoM9xzKFG3G\`
 
-  ╭┈──────────────── ꒰ 🔱 ꒱
+  ╭┈──────────────── ꒰ 🌺 ꒱
  │ *𖦹 ¡Remember that you can join the bot's official channel!*
   ╰─┈➤ ‌ ${xx}Sylph - Is The Best${xx}\n
 `.trimStart(),
@@ -231,7 +231,7 @@ const defaultMenu = {
 
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/w8egmu.mp4` }, gifPlayback: true, caption: text.trim(),
+conn.sendMessage(m.chat, { video: { url: `https://telegra.ph/file/9cee79cfcd7e142b1f27d.mp4` }, gifPlayback: true, caption: text.trim(),
 contextInfo: {
 mentionedJid: conn.parseMention(text.trim()),
 isForwarded: true,
@@ -239,12 +239,12 @@ forwardingScore: 999,
 externalAdReply: {
 title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
 body: author,
-thumbnailUrl: 'https://files.catbox.moe/82djkw.jpg'',
+thumbnailUrl: 'https://telegra.ph/file/dc68e52ff6227979070d0.jpg',
 sourceUrl: insta,
 mediaType: 1,
 renderLargerThumbnail: true
 }}}, { quoted: fkontak })
-    m.react('🗡️') 
+    m.react('🧝') 
 
   } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error', m)
