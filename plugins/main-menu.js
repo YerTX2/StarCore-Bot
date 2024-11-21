@@ -239,7 +239,7 @@ forwardingScore: 999,
 externalAdReply: {
 title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
 body: author,
-thumbnailUrl: 'https://telegra.ph/file/dc68e52ff6227979070d0.jpg',
+thumbnailUrl: 'https://files.catbox.moe/w8egmu.mp4',
 sourceUrl: insta,
 mediaType: 1,
 renderLargerThumbnail: true
