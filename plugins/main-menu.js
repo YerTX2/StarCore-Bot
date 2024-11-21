@@ -26,7 +26,6 @@ let tags = {
   'nable': 'ON/OF', 
   'nime': 'ANIME',
   'rnime': 'ANIME REACCION',
-  'descargasStarcore': 'MENU DESCARGAS',
   'tools': 'TOOSL',
   'fun': 'JUEGOS / RAROS',
   'cmd': 'BASE DE DATOS',
