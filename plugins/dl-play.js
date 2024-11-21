@@ -50,7 +50,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
 handler.command = ['play', 'playvid'];
 handler.help = ['play', 'playvid'];
-handler.tags = ['dl'];
+handler.tags = ['descargasStarcore'];
 handler.diamond = 4;
 
 export default handler;
