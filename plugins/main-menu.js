@@ -231,7 +231,7 @@ const defaultMenu = {
 
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-conn.sendMessage(m.chat, { video: { url: `https://telegra.ph/file/9cee79cfcd7e142b1f27d.mp4` }, gifPlayback: true, caption: text.trim(),
+conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/w8egmu.mp4` }, gifPlayback: true, caption: text.trim(),
 contextInfo: {
 mentionedJid: conn.parseMention(text.trim()),
 isForwarded: true,
