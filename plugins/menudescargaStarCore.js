@@ -180,8 +180,8 @@ await m.react('🔱')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'MENU KI ',
-        body: 'MENU KI',
+        title: 'MENU DESCARGAS ',
+        body: 'MENU DESCARGAS',
         thumbnailUrl: img,
         sourceUrl: global.canal,
         mediaType: 1,
