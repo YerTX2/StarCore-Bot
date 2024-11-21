@@ -13,7 +13,7 @@ let teks = tes.map(v => `
 	conn.sendFile(m.chat, tes[0].image, 'yts.jpeg', teks, m)
 }
 handler.help = ['ytsearch'] 
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.command = ['ytsearch', 'yts'] 
 
 export default handler
