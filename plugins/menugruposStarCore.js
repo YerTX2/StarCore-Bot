@@ -8,7 +8,7 @@ import fetch from 'node-fetch'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
-  before: `“ʜᴏʟᴀ *%name*, a qui esta todas las descargas 🗡️"
+  before: `“ʜᴏʟᴀ *%name*, a qui esta todos los comandos para configurar tu grupo🏆"
 
 
 ▬▭▬▭▬▭▬✦✧✦▬▭▬▭▬▭▬
@@ -21,7 +21,7 @@ const defaultMenu = {
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
-'dl': 'menudescarga',
+'nable': 'menugrupo',
 }
 let img = 'https://tinyurl.com/2xragovw'
 
@@ -180,8 +180,8 @@ await m.react('🔱')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'MENU KI ',
-        body: 'MENU KI',
+        title: 'menugrupo',
+        body: 'menugrupo',
         thumbnailUrl: img,
         sourceUrl: global.canal,
         mediaType: 1,
@@ -194,9 +194,9 @@ await m.react('🔱')
     throw e
   }
 }
-handler.help = ['menudescarga']
+handler.help = ['menugrupo']
 handler.tags = ['main']
-handler.command = ['menudescarga']
+handler.command = ['menugrupo']
 
 export default handler
 
