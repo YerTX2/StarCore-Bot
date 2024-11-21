@@ -13,69 +13,70 @@ let xx = '```'
 let fz = '5212431268546'
 let sylph = '17146121800'
 let tags = {
-  'main': 'INFO',
-  'bebot': 'SUBBOTS/JADIBOT',
-  'game': 'JUEGOS',
-  'econ': 'NIVEL ECONOMIA',
-  'rg': 'REGISTROS',
-  'sticker': 'STICKERS',
-  'img': 'IMAGENES',
-  'maker': 'MAKER',
-  'prem': 'PREMIUMS',
-  'group': 'ADM GRUPOS',
-  'nable': 'ON/OF', 
-  'nime': 'ANIME',
-  'rnime': 'ANIME REACCION',
-  'tools': 'TOOSL',
-  'fun': 'JUEGOS / RAROS',
-  'cmd': 'BASE DE DATOS',
-  'nsfw': '+18',
-  'ansfw': '+18 ANIME', 
-  'owner': 'STAFF', 
-  'advanced': 'AVANCE'
+  'main': 'Acerca dé',
+  'bebot': 'Sub - Bots',
+  'game': 'Juegos',
+  'econ': 'Level and Economy',
+  'rg': 'Registro',
+  'sticker': 'Stickers',
+  'img': 'Imagen',
+  'maker': 'Maker',
+  'prem': 'Premium',
+  'group': 'Gestión de grupos',
+  'nable': 'En/Disable opciones', 
+  'nime': 'Anime',
+  'rnime': 'Anime React',
+  'dl': 'Donwloads',
+  'tools': 'Tools',
+  'fun': 'Fun / Random',
+  'cmd': 'Database',
+  'nsfw': 'NSFW +18',
+  'ansfw': 'NSFW Anime', 
+  'owner': 'Developer', 
+  'advanced': 'Advanced'
 }
 const defaultMenu = {
   before: `
 「 ${wm} ㊎ 」\n
- ⏍ Hola🥷 @${m.sender.split`@`[0]}, ${ucpn}
+ ⏍ Hello @${m.sender.split`@`[0]}, ${ucpn}
  
   乂─────『 *\`U  S  E  R\`* 』─────乂
-   *|* • *Usuario:* %name
-   *|* • *Monedas:* %coin
+   *|* • *Name:* %name
+   *|* • *Coins:* %coin
    *|* • *Role:* %role
-   *|* • *nivel:* %level
+   *|* • *Level:* %level
    *|* • *Xp:* %exp / %maxexp
    *|* • *Total Xp:* %totalexp
    *|* • *¿VIP?:* *${global.db.data.users[m.sender].premiumTime > 1 ? 'Si': 'No'}*
   ╰───────────────⳹
  
   乂─────『 *\`I  N  F  O\`* 』─────乂
-   *|* • *Bot:* ${botName}
-   *|* • *Sistema:* %platform
+   *|* • *Bot Name:* ${botName}
+   *|* • *Platform:* %platform
    *|* • *Type:* NodeJs
-   *|* • *Creadores:* EQUIPO STARCORE
+   *|* • *Creator:* @${fz}
    *|* • *Baileys:* Multi - Device
    *|* • *Prefix:* [ *%_p* ]
-   *|* • *Tiempo:* %muptime
-   *|* • *Bot estado:* %mode
+   *|* • *Uptime:* %muptime
+   *|* • *Bot status:* %mode
    *|* • *Database:* %rtotalreg - %totalreg
-   *|* • *Estado:* ${m.sender.split`@`[0] == fz  ? 'Developer' : m.sender.split`@`[0] == sylph ? 'Official bot (In development)' :  (user.premiumTime >= 1 ? 'VIP User' : 'Free User')}
+   *|* • *Status:* ${m.sender.split`@`[0] == fz  ? 'Developer' : m.sender.split`@`[0] == sylph ? 'Official bot (In development)' :  (user.premiumTime >= 1 ? 'VIP User' : 'Free User')}
   ╰───────────────⳹
   
   %sbot
   
-\`[ ❤️ ] ¿UN BOT CON MULTIPLIQUES FUNCIONES DEL TEAM! ❤️\`
+\`[ 🌱 ] ¿Some command has error? ¡Report it to the developer for a solution! 🦦\`
   
   乂────『 *I N F O   C M D* 』────乂 
-  │ \`%totalfeatures\` _Comando invalido_
+  │ \`%totalfeatures\` _Commands available for use_
   ╰───────────────⳹
   
   乂────『 *I N F O   M E N U* 』────乂 
   │ *𖦹 Premium: 🪙*
-  │ *𖦹 Diamante: 💎*
+  │ *𖦹 Diamond: 💎*
   ╰───────────────⳹
 
-\`https://whatsapp.com/channel/0029VankMyeBadmR9Ou0So3t`
+\`https://whatsapp.com/channel/0029Va6InNBFCCoM9xzKFG3G\`
 
   ╭┈──────────────── ꒰ 🌺 ꒱
  │ *𖦹 ¡Remember that you can join the bot's official channel!*
@@ -88,7 +89,8 @@ const defaultMenu = {
 ╭───❑ 「 \`INFORMACION\` 」 ❑───
 │ Si quieres unir el bot a tu grupo,
 │ contacta con el creador usando:
-│ #owner o bien, toca el @tag.
+│ #owner o bien, toca el @tag del 
+│ menú principal.
 ╰─❑ ${wm}
 `,
 }
@@ -229,7 +231,7 @@ const defaultMenu = {
 
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/w8egmu.mp4` }, gifPlayback: true, caption: text.trim(),
+conn.sendMessage(m.chat, { video: { url: `https://telegra.ph/file/9cee79cfcd7e142b1f27d.mp4` }, gifPlayback: true, caption: text.trim(),
 contextInfo: {
 mentionedJid: conn.parseMention(text.trim()),
 isForwarded: true,
@@ -237,12 +239,12 @@ forwardingScore: 999,
 externalAdReply: {
 title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
 body: author,
-thumbnailUrl: 'https://files.catbox.moe/82djkw.jpg',
+thumbnailUrl: 'https://telegra.ph/file/dc68e52ff6227979070d0.jpg',
 sourceUrl: insta,
 mediaType: 1,
 renderLargerThumbnail: true
 }}}, { quoted: fkontak })
-    m.react('🗡️') 
+    m.react('🧝') 
 
   } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error', m)
