@@ -12,7 +12,7 @@ const handler = async (m, {conn, args, command, usedPrefix, text}) => {
   }
 };
 handler.help = ['xvideos']
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.command = /^(xvideosdl|xvid)$/i;
 handler.diamond = 6
 export default handler;
