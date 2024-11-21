@@ -13,7 +13,7 @@ let link_dl = await fetch(link)
 conn.sendFile(m.chat, url_dl, resultado + '.apk', `*⌗ ApkPure Downloader*`, m, false, { mimetype: 'application/videos.android.package-archive', asDocument: true })
 m.react(done)
 }
-handler.tags = ['dl', 'prem']
+handler.tags = ['descargasStarcore', 'prem']
 handler.help = ['apkpure']
 handler.command = ['apkpure'] 
 handler.premium = true
