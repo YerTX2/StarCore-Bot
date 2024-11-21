@@ -13,7 +13,7 @@ m.react(done)
   
 }
 handler.help = ['twitter'].map(v => v + ' <url>')
-handler.tags = ['dl']
+handler.tags = ['descargasStarcore']
 handler.command = ['twitter', 'tw', 'x']
 handler.diamond = 4
 
