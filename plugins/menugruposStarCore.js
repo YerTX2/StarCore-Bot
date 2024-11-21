@@ -21,7 +21,7 @@ const defaultMenu = {
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
-'nable': 'menugrupo',
+'nable', 'group': 'menugrupo',
 }
 
 let img = 'https://tinyurl.com/2xragovw'
