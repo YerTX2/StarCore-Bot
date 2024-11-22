@@ -18,7 +18,7 @@ export async function before(m, { conn }) {
   };
 
   // Respuesta con enlace de Canal de WhatsApp
-  global.rcanal = {
+  global.canal = {
     contextInfo: {
             isForwarded: true,
     forwardedNewsletterMessageInfo: {
