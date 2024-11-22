@@ -89,24 +89,9 @@ global.error = '❌'
 global.xmoji = '🔥' 
 
 
-estilo = {
-  key: {
-    fromMe: false,
-    participant: `0@s.whatsapp.net`,
-    ...(true ? { remoteJid: "120363350628883149-120363350628883149@broadcast" } : {})
-  },
-  message: {
-    orderMessage: {
-      itemCount: -999999,
-      status: 1,
-      surface: 1,
-      message: wm,
-      orderTitle: 'Bang',
-      thumbnail: imagen,
-      sellerJid: '0@s.whatsapp.net'
-    }
-  }
-}
+////// SCRAPERS BY FZ /////
+// No Hay pijes 🕊️
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "120363350628883149-120363350628883149@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: wm, orderTitle: 'Bang', thumbnail: imagen, sellerJid: '0@s.whatsapp.net'}}}
 ///////////////
 
 global.multiplier = 69 
