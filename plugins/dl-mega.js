@@ -1,6 +1,4 @@
-Aquí te dejo el código modificado con el objeto `forwardedNewsletterMessageInfo` agregado:
 
-```javascript
 import { File } from "megajs";
 import path from "path";
 
