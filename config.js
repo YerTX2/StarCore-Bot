@@ -81,7 +81,7 @@ global.scrapers = scrapers
 
 global.ytdl = ytdl
 global.yt = yt
-global.wait = '⌛ _Espera un momento . . ._'
+global.wait = '⌛ espere un momento se esta enviando su pedido'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
