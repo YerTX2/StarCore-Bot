@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   let { title, play, duration } = data.result;
   let { nickname } = data.result.author;
 
-  // Enviar el video con la propiedad 'forwardedNewsletterMessageInfo'
+ 'forwardedNewsletterMessageInfo'
   conn.sendFile(m.chat, `${play}`, `tiktok.mp4`, `*🌴 ${nickname}:  ${title}*\n *• ${duration}*`, m, {
     contextInfo: {
       forwardedNewsletterMessageInfo: {
