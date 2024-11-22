@@ -17,6 +17,28 @@ export async function before(m, { conn }) {
     }
   };
 
+  // Respuesta con enlace de Canal de WhatsApp
+  global.rcanal = {
+    contextInfo: {
+            isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        mediaUrl: link_,
+        mediaType: 'VIDEO',
+        description: 'canal del grupo',
+        title: packname,
+        body: 'Canal de FG98',
+        thumbnailUrl: pp,
+        sourceUrl: link_
+      }
+    }
+  }
+
+
  global.fkontak = {
         key: {
             participant: '0@s.whatsapp.net',
