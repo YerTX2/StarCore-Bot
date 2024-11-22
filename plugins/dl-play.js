@@ -19,18 +19,16 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     ≡ URL : » ${videoInfo.url}
 
 # 🌴 Su ${isVideo ? 'Video' : 'Audio'} se está enviando, espere un momento...\`\`\``;
-
-  conn.sendMessage(m.chat, {
-    image: { url: videoInfo.thumbnail },
-    caption: body,
-    contextInfo: {
+conn.sendMessage(m.chat, { image: { url: videoInfo.thumbnail }, caption: body,
+contextInfo: {
+mentionedJid: [m.sender],
+isForwarded: true,
+forwardingScore: 1, 
 forwardedNewsletterMessageInfo: {
 newsletterJid: '120363350628883149@newsletter',
 newsletterName: '【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】',
 serverMessageId: -1
-}
-}
-  }, { quoted: fkontak });
+}}}, { quoted: fkontak})
 
   let result;
   try {
