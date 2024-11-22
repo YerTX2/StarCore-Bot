@@ -23,6 +23,13 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   conn.sendMessage(m.chat, {
     image: { url: videoInfo.thumbnail },
     caption: body,
+    contextInfo: {
+forwardedNewsletterMessageInfo: {
+newsletterJid: '120363350628883149@newsletter',
+newsletterName: '【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】',
+serverMessageId: -1
+}
+}
   }, { quoted: fkontak });
 
   let result;
