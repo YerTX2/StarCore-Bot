@@ -1,57 +1,18 @@
-let handler = async (m, { conn, text, args, usedPrefix, command }) => {
-  // Verificar si se proporcionó un enlace
-  if (!args[0]) throw `✳️ Por favor, proporciona un enlace de TikTok.\n\n📌 Ejemplo: ${usedPrefix + command} https://www.tiktok.com/@usuario/video/1234567890`;
+let handler = async (m, { conn, text, args, usedPrefix, command}) => {
+if (!args[0]) throw `✳️ ${mssg.noLink('TikTok')}\n\n 📌 ${mssg.example} : ${usedPrefix + command} https://vm.tiktok.com/ZMreHF2dC/`;
 
-  // Verificar si el enlace es válido
-  if (!/(https?:\/\/)?(www\.)?(tiktok\.com\/(@\w+\/video\/\d+|v\/\w+))/.test(args[0])) 
-    throw `❎ El enlace proporcionado no es válido.`;
+if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) throw `❎ ${mssg.noLink('TikTok')}`;
+await m.react(rwait)
 
-  // Reaccionar con un estado de espera
-  await m.react(rwait);
+let data = await fg.tiktok(`${args[0]}`);
+let { title, play, duration } = data.result;
+let { nickname } = data.result.author;
 
-  try {
-    // Obtener los datos del video de TikTok
-    let data = await fg.tiktok(args[0]);
-    if (!data || !data.result) throw "❌ No se pudo obtener información del video.";
-
-    let { title, play, duration, author } = data.result;
-    let { nickname } = author;
-
-    // Imagen opcional
-    let imagen = 'https://example.com/imagen-placeholder.jpg'; // Reemplaza con una URL válida
-
-    // Enviar la imagen junto con la información del video
-    await conn.sendMessage(m.chat, {
-      image: { url: imagen },
-      caption: `@${m.sender.split('@')[0]}\n\n*Información del video obtenida correctamente.*`,
-      contextInfo: {
-        mentionedJid: [m.sender],
-      }
-    }, { quoted: m });
-
-    // Enviar el video con la información del video
-    await conn.sendMessage(m.chat, {
-      video: { url: play },
-      caption: `@${m.sender.split('@')[0]}\n\n*Autor:* ${nickname}\n*Título:* ${title}\n*Duración:* ${duration} segundos`,
-      contextInfo: {
-        mentionedJid: [m.sender],
-      }
-    }, { quoted: m });
-
-    // Reaccionar con un estado de éxito
-    m.react(done);
-
-  } catch (error) {
-    // Manejar errores
-    console.error(error);
-    throw "❌ Hubo un error al intentar descargar o enviar el video. Por favor, verifica el enlace y vuelve a intentarlo.";
-  }
+conn.sendFile(m.chat, `${play}`, `tiktok.mp4`, `*🌴 ${nickname}:  ${title}*\n *• ${duration}*`, m);
+m.react(done)
 }
-
-// Configuración del comando
-handler.help = ['tiktok'];
-handler.tags = ['descargas'];
-handler.command = /^(tt|tiktok)(dl|nowm)?$/i;
-handler.diamond = 4;
-
-export default handler;
+handler.help = ['tiktok']
+handler.tags = ['descargasStarcore']
+handler.command = /^(tt|tiktok)(dl|nowm)?$/i
+handler.diamond = 4
+export default handler
