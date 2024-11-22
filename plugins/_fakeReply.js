@@ -23,7 +23,7 @@ export async function before(m, { conn }) {
     contextInfo: {
             isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363350628883149',
+      newsletterJid: '120363350628883149@newsletter',
       serverMessageId: 100,
       newsletterName: nam,
     }, 
