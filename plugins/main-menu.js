@@ -1,3 +1,5 @@
+
+@@ -1,287 +1,273 @@
 import { promises } from 'fs'
 import fs from 'fs'
 import moment from 'moment-timezone'
@@ -65,7 +67,7 @@ const defaultMenu = {
   
   %sbot
   
-\`[ 👑 ] ¿Que Comando Tiene Error? ¡Reportalo al owner para darle solución ! 🦦\`
+\`[ 🌱 ] ¿Some command has error? ¡Report it to the developer for a solution! 🦦\`
   
   乂────『 *I N F O   C M D* 』────乂 
   │ \`%totalfeatures\` _Commands available for use_
@@ -75,11 +77,24 @@ const defaultMenu = {
   │ *𖦹 Premium: 🪙*
   │ *𖦹 Diamond: 💎*
   ╰───────────────⳹
-
 \`https://whatsapp.com/channel/0029VankMyeBadmR9Ou0So3t\`
-
+  ╭┈──────────────── ꒰ 🌺 ꒱
+ │ *𖦹 ¡Remember that you can join the bot's official channel!*
+  ╰─┈➤ ‌ ${xx}Sylph - Is The Best${xx}\n
+`.trimStart(),
+  header: `╭──ꕥ *\`%category\`* ꕥ──`,
+  body: `│✾ *\`%cmd\`* %isdiamond %isPremium\n`,
+  footer: `╰─❑\n`,
+  after: `
+╭───❑ 「 \`INFORMACION\` 」 ❑───
+│ Si quieres unir el bot a tu grupo,
+│ contacta con el creador usando:
+│ #owner o bien, toca el @tag del 
+│ menú principal.
+╰─❑ ${wm}
+`,
+}
   
-
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let d = new Date(new Date + 3600000)
@@ -118,7 +133,6 @@ const defaultMenu = {
    let usrs = glb[m.sender]
    let tag = `@${m.sender.split("@")[0]}`
    let mode = global.opts["self"] ? "Private" : "Public"
-
    let {
  age,
  exp,
@@ -140,7 +154,6 @@ const defaultMenu = {
        let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
    let totalfeatures = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
-
     let totalreg = Object.keys(global.db.data.users).length
     let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
@@ -223,7 +236,7 @@ mentionedJid: conn.parseMention(text.trim()),
 isForwarded: true,
 forwardingScore: 999,
 externalAdReply: {
-title: conn.getName(m.sender) + ', Gracias Por Usar A StarCore, you can follow me on Instagram by clicking here.',
+title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
 body: author,
 thumbnailUrl: 'https://i.ibb.co/PGLsJVd/images-4.jpg',
 sourceUrl: insta,
@@ -271,3 +284,7 @@ res = "Good night. 🌃"
 }
 return res
 }
+0 commit comments
+Comments
+0
+ (0)
