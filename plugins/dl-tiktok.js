@@ -1,4 +1,4 @@
-Agrega este código de javaSctipt conn.sendMessage(m.chat, { image: imagen, caption: `@${m.sender.split('@')[0]}`,
+ conn.sendMessage(m.chat, { image: imagen, caption: `@${m.sender.split('@')[0]}`,
 contextInfo: {
 mentionedJid: [m.sender],
 isForwarded: true,
