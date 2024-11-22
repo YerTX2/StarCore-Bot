@@ -1,4 +1,3 @@
-
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   // Verificar si se proporcionó un enlace
   if (!args[0]) throw `✳️ ${mssg.noLink('TikTok')}\n\n 📌 ${mssg.example} : ${usedPrefix + command} (enlace no disponible)`;
@@ -14,11 +13,8 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   let { title, play, duration } = data.result;
   let { nickname } = data.result.author;
 
-  // Obtener la imagen del video
-  let imagen = await conn.getBuffer(`${play}`);
-
-  // Enviar la imagen con la información del video
-  conn.sendMessage(m.chat, { image: imagen, caption: `@${m.sender.split('@')[0]}`, contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardingScore: 1, forwardedNewsletterMessageInfo: { newsletterJid: '120363350628883149@newsletter', newsletterName: '【✫𝚃𝙴𝙰𝙼 乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】', serverMessageId: -1 }}}, { quoted: fkontak});
+  // Enviar el video con la información del video
+  conn.sendMessage(m.chat, { video: { url: play }, caption: `@${m.sender.split('@')[0]}\n\n*${nickname}*\n*${title}*\n*${duration}*`, contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardingScore: 1, forwardedNewsletterMessageInfo: { newsletterJid: '120363350628883149@newsletter', newsletterName: '【✫𝚃𝙴𝙰𝙼 乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】', serverMessageId: -1 }}}, { quoted: fkontak});
 
   // Reaccionar con un estado de éxito
   m.react(done);
@@ -29,4 +25,6 @@ handler.help = ['tiktok'];
 handler.tags = ['descargasStarcore'];
 handler.command = /^(tt|tiktok)(dl|nowm)?$/i;
 handler.diamond = 4;
+
 export default handler;
+```
