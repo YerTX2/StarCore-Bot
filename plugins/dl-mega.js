@@ -14,6 +14,15 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         m.react(rwait);
 
         const caption = `   *--- ${botName} ---*\nFile: ${file.name}\nSize: ${formatBytes(file.size)}`;
+        await conn.sendFile(m.chat, data, file.name, caption, m, null, {
+            mimetype,
+            asDocument: true,
+            forwardedNewsletterMessageInfo: {
+                newsletterJid: '120363350628883149@newsletter',
+                newsletterName: '【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】',
+                serverMessageId: -1
+            }
+        }); 
 
         const data = await file.downloadBuffer();
 
@@ -31,15 +40,6 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
 
         let mimetype = mimeTypes[fileExtension] || "application/octet-stream";
 
-        await conn.sendFile(m.chat, data, file.name, caption, m, null, {
-            mimetype,
-            asDocument: true,
-            forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363350628883149@newsletter',
-                newsletterName: '【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】',
-                serverMessageId: -1
-            }
-        });
 
     } catch (error) {
         return m.reply(`Error: ${error.message}`);
