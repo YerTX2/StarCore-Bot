@@ -3,16 +3,7 @@ import path from "path";
 
 let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     try {
-        conn.sendMessage(m.chat, { image: imagen, caption: `@${m.sender.split('@')[0]}`,
-contextInfo: {
-mentionedJid: [m.sender],
-isForwarded: true,
-forwardingScore: 1, 
-forwardedNewsletterMessageInfo: {
-newsletterJid: '120363350628883149@newsletter',
-newsletterName: '【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】',
-serverMessageId: -1
-}}}, { quoted: fkontak}), `\`\`\`[ 🌴 ] Uso correcto del comando:\`\`\` ${usedPrefix + command} https://mega.nz/file/ovJTHaQZ#yAbkrvQgykcH_NDKQ8eIc0zvsN7jonBbHZ_HTQL6lZ8`, 
+        if (!text) return conn.reply(m.chat, `\`\`\`[ 🌴 ] Uso correcto del comando:\`\`\` ${usedPrefix + command} https://mega.nz/file/ovJTHaQZ#yAbkrvQgykcH_NDKQ8eIc0zvsN7jonBbHZ_HTQL6lZ8`, null, { quoted: fkontak});
 
         const file = File.fromURL(text);
         await file.loadAttributes();
