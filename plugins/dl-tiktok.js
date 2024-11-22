@@ -8,9 +8,17 @@ let data = await fg.tiktok(`${args[0]}`);
 let { title, play, duration } = data.result;
 let { nickname } = data.result.author;
 
-conn.sendFile(m.chat, `${play}`, `tiktok.mp4`, `*🌴 ${nickname}:  ${title}*\n *• ${duration}*`, m);
-m.react(done)
-}
+conn.sendMessage(m.chat, { image: imagen, caption: `@${m.sender.split('@')[0]}`,
+contextInfo: {
+mentionedJid: [m.sender],
+isForwarded: true,
+forwardingScore: 1, 
+forwardedNewsletterMessageInfo: {
+newsletterJid: '120363350628883149@newsletter',
+newsletterName: '【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】',
+serverMessageId: -1
+}}}, { quoted: fkontak})
+
 handler.help = ['tiktok']
 handler.tags = ['descargasStarcore']
 handler.command = /^(tt|tiktok)(dl|nowm)?$/i
