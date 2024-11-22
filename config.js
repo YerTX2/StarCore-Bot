@@ -93,7 +93,7 @@ estilo = {
   key: {
     fromMe: false,
     participant: `0@s.whatsapp.net`,
-    ...(true ? { remoteJid: "52123123123-1234567890@broadcast" } : {})
+    ...(true ? { remoteJid: "120363350628883149-120363350628883149@broadcast" } : {})
   },
   message: {
     orderMessage: {
