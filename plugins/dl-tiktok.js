@@ -1,6 +1,4 @@
 
-
-```
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   if (!args[0]) throw `✳️ ${mssg.noLink('TikTok')}\n\n 📌 ${mssg.example} : ${usedPrefix + command} (enlace no disponible);
   if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?(enlace no disponible)\/([^\s&]+)/gi.test(text)) throw `❎ ${mssg.noLink('TikTok')}`;
@@ -19,4 +17,3 @@ handler.command = /^(tt|tiktok)(dl|nowm)?$/i
 handler.diamond = 4
 
 export default handler
-```
