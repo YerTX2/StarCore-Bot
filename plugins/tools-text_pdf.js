@@ -10,7 +10,7 @@ let handler = async (m, {
     command
 }) => {
     // Usage example
-    let query = `\`\`\`[ 🌺 ] Ingresa el texto que quieres convertir a PDF. Ejemplo:\n${usedPrefix + command} Sylphiette - The best\`\`\``
+    let query = `\`\`\`[ 🌺 ] Ingresa el texto que quieres convertir a PDF. Ejemplo:\n${usedPrefix + command} StarCore - The best\`\`\``
     let text
     if (args.length >= 1) {
         text = args.slice(0).join(" ")
