@@ -67,6 +67,6 @@ const akinator = global.db.data.users[m.sender].akinator;
   }
 };
 handler.help = ['akinator'];
-handler.tags = ['game'];
+handler.tags = ['fun'];
 handler.command = /^(akinator)$/i;
 export default handler;
