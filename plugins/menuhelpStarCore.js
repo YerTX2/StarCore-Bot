@@ -179,7 +179,7 @@ await m.react('🤖')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'MENU PRINCIPAL',
+        body: 'MENU PRINCIPAL',
         thumbnailUrl: img,
         sourceUrl: global.canal,
         mediaType: 1,
