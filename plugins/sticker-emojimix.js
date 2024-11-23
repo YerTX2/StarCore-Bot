@@ -13,7 +13,7 @@ conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
 }}
 
 handler.help = ['emojimix <emoji+emoji>']
-handler.tags = ['sticker']
+handler.tags = ['tools']
 handler.command = ['emojimix'] 
 handler.diamond = true
 
