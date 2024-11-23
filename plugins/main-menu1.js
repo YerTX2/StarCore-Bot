@@ -8,7 +8,7 @@ import fetch from 'node-fetch'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
-  before: `“ʜᴏʟᴀ *%name*, a qui esta todos los comandos de menu🔱"
+  before: `“ʜᴏʟᴀ *%name*, a qui esta la lista de los que esta disponible 🔱"
 
 
 ▬▭▬▭▬▭▬✦✧✦▬▭▬▭▬▭▬
@@ -173,15 +173,15 @@ let img = 'https://i.ibb.co/B6fLfMn/StarCore.jpg'
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
- let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+ let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '120363350628883149@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
 await m.react('🔥') 
 
  conn.sendMessage(m.chat, {
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'menu',
-        body: 'menu',
+        title: 'menuLista',
+        body: 'menuLista',
         thumbnailUrl: img,
         sourceUrl: global.canal,
         mediaType: 1,
