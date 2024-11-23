@@ -16,6 +16,6 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     
  }
  handler.help = ['language <es-en>']
- handler.tags = ['main']
+ handler.tags = ['owner']
  handler.command = ['language', 'lenguaje', 'lang', 'idioma'] 
  export default handler
