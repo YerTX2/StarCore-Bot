@@ -240,24 +240,6 @@ newsletterName: 'StarCore | Team',
 serverMessageId: -1
 }}}, { quoted: fkontak})
 
-conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/w8egmu.mp4` }, gifPlayback: true, caption: text.trim(),
-contextInfo: {
-mentionedJid: conn.parseMention(text.trim()),
-isForwarded: true,
-forwardingScore: 999,
-externalAdReply: {
-title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
-body: author,
-thumbnailUrl: 'https://i.ibb.co/PGLsJVd/images-4.jpg',
-sourceUrl: insta,
-mediaType: 1,
-renderLargerThumbnail: true
-},
-forwardedNewsletterMessageInfo: {
-newsletterJid: '120363350628883149@newsletter',
-newsletterName: 'sexo',
-serverMessageId: -1
-}}, { quoted: fkontak })
     m.react('🏆') 
 
   } catch (e) {
