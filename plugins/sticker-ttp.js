@@ -11,7 +11,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     throw stiker.toString()
 }
 handler.help = ['ttp <text>']
-handler.tags = ['sticker']
+handler.tags = ['tools']
 handler.command = ['ttp']
 
 export default handler
