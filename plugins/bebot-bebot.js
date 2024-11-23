@@ -34,7 +34,7 @@ const { version } = await fetchLatestBaileysVersion()
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: true,
-browser: ['Sylphiette ( subbot )', 'Safari', '2.0.0'],
+browser: ['StarCore ( subbot )', 'Safari', '2.0.0'],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
