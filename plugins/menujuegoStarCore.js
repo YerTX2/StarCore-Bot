@@ -194,9 +194,9 @@ await m.react('👑')
     throw e
   }
 }
-handler.help = ['menuowner']
+handler.help = ['menujuegos']
 handler.tags = ['main']
-handler.command = ['menuowner','ownermenu']
+handler.command = ['menujuegos','juegosmenu']
 
 export default handler
 
