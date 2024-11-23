@@ -22,7 +22,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'main': 'menu',
 }
-let img = 'https://files.catbox.moe/6pig9h.jpg'
+let video = 'https://files.catbox.moe/f0q0he.mp4'
 
   try {
           // DEFAULT MENU
