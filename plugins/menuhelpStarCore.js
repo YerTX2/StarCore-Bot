@@ -22,7 +22,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'main': 'menu',
 }
-let img = 'https://i.ibb.co/MPMTQzx/StarCore.jpg'
+let img = 'https://files.catbox.moe/6pig9h.jpg'
 
   try {
           // DEFAULT MENU
@@ -179,7 +179,7 @@ await m.react('🔱')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'HELP',
+        title: 'MENU PRINCIPAL',
         body: 'HELP',
         thumbnailUrl: img,
         sourceUrl: global.canal,
@@ -193,7 +193,7 @@ await m.react('🔱')
     throw e
   }
 }
-handler.help = ['menu2']
+handler.help = ['menuhelp']
 handler.tags = ['main']
 handler.command = ['menu', 'help']
 
