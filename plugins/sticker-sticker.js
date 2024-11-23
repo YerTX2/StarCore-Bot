@@ -42,7 +42,7 @@ const i = ``
   }
 }
 handler.help = ['sticker']
-handler.tags = ['sticker']
+handler.tags = ['tools']
 handler.command = ['s', 'sticker'] 
 
 export default handler
