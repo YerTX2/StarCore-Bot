@@ -229,6 +229,17 @@ const defaultMenu = {
 
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
+conn.sendMessage(m.chat, { video: { url: 'https://files.catbox.moe/w8egmu.mp4' }, caption: text.trim(),
+contextInfo: {
+mentionedJid: conn.parseMention(text.trim()),
+isForwarded: true,
+forwardingScore: 1, 
+forwardedNewsletterMessageInfo: {
+newsletterJid: '120363350628883149@newsletter',
+newsletterName: 'StarCore | Team',
+serverMessageId: -1
+}}}, { quoted: fkontak})
+
 conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/w8egmu.mp4` }, gifPlayback: true, caption: text.trim(),
 contextInfo: {
 mentionedJid: conn.parseMention(text.trim()),
