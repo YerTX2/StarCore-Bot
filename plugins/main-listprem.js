@@ -30,7 +30,7 @@ ${b}
 
 }
 handler.help = ['listprem']
-handler.tags = ['main']
+handler.tags = ['owner']
 handler.command = ['listprem', 'premlist', 'listpremium'] 
   
 export default handler
