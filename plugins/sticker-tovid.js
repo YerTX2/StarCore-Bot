@@ -36,7 +36,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
 	} else throw `✳️ ${mssg.replyStick}`
 }
 handler.help = ['tovid']
-handler.tags = ['sticker']
+handler.tags = ['tools']
 handler.command = ['tovideo', 'tovid', 'mp4', 'tomp4', 'togif']
 
 export default handler
