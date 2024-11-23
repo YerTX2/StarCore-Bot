@@ -54,7 +54,7 @@ const connectionOptions = {
   logger: pino({ level: 'silent' }),
   printQRInTerminal: false,
   mobile: MethodMobile, 
-  browser: [ "Sylph", "Chrome", "20.0.04" ], 
+  browser: [ "StarCore", "Chrome", "20.0.04" ], 
   auth: {
   creds: state.creds,
   keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
