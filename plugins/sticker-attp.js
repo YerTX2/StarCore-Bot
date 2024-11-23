@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     throw stiker.toString()
 }
 handler.help = ['attp <text>']
-handler.tags = ['sticker']
+handler.tags = ['tools']
 handler.command = ['attp'] 
 
 export default handler
