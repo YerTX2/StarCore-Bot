@@ -24,8 +24,7 @@ let tags = {
 'main': 'menu',
 }
 
-let gifUrl = "https://telegra.ph/file/5d3143ba763dba19fa349.mp4";
-await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
+let img = 'https://i.ibb.co/B6fLfMn/StarCore.jpg
   try {
           // DEFAULT MENU
       let dash = global.dashmenu
