@@ -24,7 +24,7 @@ let tags = {
 'fun', 'game': 'menujuegos',
 }
 
-let img = 'https://i.ibb.co/gtBfXt1/StarCore. jpg'
+let img = 'https://i.ibb.co/gtBfXt1/StarCore.jpg'
   try {
           // DEFAULT MENU
       let dash = global.dashmenu
