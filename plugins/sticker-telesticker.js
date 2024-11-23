@@ -21,7 +21,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 }
 
 handler.help = ['telestick']
-handler.tags = ['sticker']
+handler.tags = ['tools']
 handler.command = ['tgstick', 'telestick', 'telesticker', 'tgsticker']
 
 export default handler
