@@ -195,7 +195,7 @@ await m.react('🔱')
 }
 handler.help = ['menu2']
 handler.tags = ['main']
-handler.command = ['menu2', 'help']
+handler.command = ['menu', 'help']
 
 export default handler
 
