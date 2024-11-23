@@ -195,7 +195,7 @@ await m.react('🔥')
   }
 }
 handler.help = ['listamenu']
-handler.command = ['menu']
+handler.command = ['menumenu']
 
 export default handler
 
