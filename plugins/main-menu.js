@@ -1,4 +1,3 @@
-
 import { promises } from 'fs'
 import fs from 'fs'
 import moment from 'moment-timezone'
@@ -14,38 +13,38 @@ let xx = '```'
 let fz = '500000000'
 let sylph = '17146121800'
 let tags = {
-  'main': 'Acerca dé',
-  'bebot': 'Sub - Bots',
-  'game': 'Juegos',
-  'econ': 'Level and Economy',
-  'rg': 'Registro',
-  'sticker': 'Stickers',
-  'img': 'Imagen',
-  'maker': 'Maker',
-  'prem': 'Premium',
-  'group': 'Gestión de grupos',
-  'nable': 'En/Disable opciones', 
-  'nime': 'Anime',
-  'rnime': 'Anime React',
-  'dl': 'Donwloads',
-  'tools': 'Tools',
-  'fun': 'Fun / Random',
-  'cmd': 'Database',
-  'nsfw': 'NSFW +18',
-  'ansfw': 'NSFW Anime', 
-  'owner': 'Developer', 
-  'advanced': 'Advanced'
+  'main': 'INFO',
+  'bebot': 'SUBBOTS/JADI',
+  'game': 'JUEGOS',
+  'econ': 'NIVEL DE ENOCOMIA',
+  'rg': 'REGISTRO',
+  'sticker': 'STICKERS',
+  'img': 'IMAGENES',
+  'maker': 'MAKER',
+  'prem': 'PREMIUM',
+  'group': 'GESTOR DE GRUPOS',
+  'nable': 'ON/,OF', 
+  'nime': 'ANIME',
+  'rnime': 'ANIME REACCION',
+  'dl': 'DESCARGAS',
+  'tools': 'TOOLS',
+  'fun': 'JUEGOS/ RAROS',
+  'cmd': 'BASE DE DATOS',
+  'nsfw': '+18',
+  'ansfw': '+18 ANIME', 
+  'owner': 'OWNER', 
+  'advanced': 'AVANCE'
 }
 const defaultMenu = {
   before: `
 「 ${wm} ㊎ 」\n
  ⏍ Hello @${m.sender.split`@`[0]}, ${ucpn}
  
-  乂─────『 *\`U  S  E  R\`* 』─────乂
-   *|* • *Name:* %name
-   *|* • *Coins:* %coin
+  乂─────『 *\`USUARIO\`* 』─────乂
+   *|* • *Nombre:* %name
+   *|* • *Monedas:* %coin
    *|* • *Role:* %role
-   *|* • *Level:* %level
+   *|* • *Nivel:* %level
    *|* • *Xp:* %exp / %maxexp
    *|* • *Total Xp:* %totalexp
    *|* • *¿VIP?:* *${global.db.data.users[m.sender].premiumTime > 1 ? 'Si': 'No'}*
@@ -66,7 +65,7 @@ const defaultMenu = {
   
   %sbot
   
-\`[ 🌱 ] ¿Some command has error? ¡Report it to the developer for a solution! 🦦\`
+\`[ ❤️ ] ¿UN BOT LLENO DE COMANDOS INCREÍBLES DE PARTE DEL TEAM! ❤️\`
   
   乂────『 *I N F O   C M D* 』────乂 
   │ \`%totalfeatures\` _Commands available for use_
@@ -77,9 +76,9 @@ const defaultMenu = {
   │ *𖦹 Diamond: 💎*
   ╰───────────────⳹
 \`https://whatsapp.com/channel/0029VankMyeBadmR9Ou0So3t\`
-  ╭┈──────────────── ꒰ 🌺 ꒱
+  ╭┈──────────────── ꒰ 👾 ꒱
  │ *𖦹 ¡Remember that you can join the bot's official channel!*
-  ╰─┈➤ ‌ ${xx}Sylph - Is The Best${xx}\n
+  ╰─┈➤ ‌ ${xx} Starcore - Is The Best${xx}\n
 `.trimStart(),
   header: `╭──ꕥ *\`%category\`* ꕥ──`,
   body: `│✾ *\`%cmd\`* %isdiamond %isPremium\n`,
@@ -229,17 +228,24 @@ const defaultMenu = {
 
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-conn.sendMessage(m.chat, { video: { url: 'https://files.catbox.moe/w8egmu.mp4' }, caption: text.trim(),
+conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/w8egmu.mp4` }, gifPlayback: true, caption: text.trim(),
 contextInfo: {
 mentionedJid: conn.parseMention(text.trim()),
 isForwarded: true,
-forwardingScore: 1, 
+forwardingScore: 999,
+externalAdReply: {
+title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
+body: author,
+thumbnailUrl: 'https://i.ibb.co/PGLsJVd/images-4.jpg',
+sourceUrl: insta,
+mediaType: 1,
+renderLargerThumbnail: true
+},
 forwardedNewsletterMessageInfo: {
 newsletterJid: '120363350628883149@newsletter',
-newsletterName: 'StarCore | Team',
+newsletterName: 'TEAM STARCORE',
 serverMessageId: -1
-}}}, { quoted: fkontak})
-
+}}, { quoted: fkontak })
     m.react('🏆') 
 
   } catch (e) {
@@ -280,6 +286,5 @@ if (time >= 18) {
 res = "Good night. 🌃"
 }
 return res
-}
-
- 
+        }
+     
