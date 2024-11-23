@@ -241,7 +241,12 @@ thumbnailUrl: 'https://i.ibb.co/PGLsJVd/images-4.jpg',
 sourceUrl: insta,
 mediaType: 1,
 renderLargerThumbnail: true
-}}}, { quoted: fkontak })
+},
+forwardedNewsletterMessageInfo: {
+newsletterJid: '120363350628883149@newsletter',
+newsletterName: 'sexo',
+serverMessageId: -1
+}}, { quoted: fkontak })
     m.react('🏆') 
 
   } catch (e) {
