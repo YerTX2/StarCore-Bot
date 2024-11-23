@@ -21,7 +21,7 @@ const defaultMenu = {
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
-'fun': 'menujuegos',
+'fun', 'game': 'menujuegos',
 }
 
 let img = 'https://files.catbox.moe/hpj4bu.jpg'
