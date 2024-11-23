@@ -24,7 +24,7 @@ let tags = {
 'owner': 'menuowner',
 }
 
-let img = 'https://i.ibb.co/CBqdNVh/StarCore.jpg'
+let img = 'https://files.catbox.moe/hpj4bu.jpg'
   try {
           // DEFAULT MENU
       let dash = global.dashmenu
