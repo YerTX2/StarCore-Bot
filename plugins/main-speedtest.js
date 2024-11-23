@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     }
 }
 handler.help = ['speedtest']
-handler.tags = ['main']
+handler.tags = ['owner']
 handler.command = /^(speedtest|testspeed)$/i
 
 export default handler
