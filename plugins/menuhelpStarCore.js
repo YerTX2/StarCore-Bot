@@ -22,7 +22,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'main': 'menu',
 }
-let video = 'https://files.catbox.moe/f0q0he.mp4'
+let img = 'https://files.catbox.moe/i8w2f1.jpg'
 
   try {
           // DEFAULT MENU
@@ -181,7 +181,7 @@ await m.react('🤖')
         externalAdReply: {
         title: 'MENU PRINCIPAL',
         body: 'HELP',
-        thumbnailUrl: video,
+        thumbnailUrl: img,
         sourceUrl: global.canal,
         mediaType: 1,
         renderLargerThumbnail: true
