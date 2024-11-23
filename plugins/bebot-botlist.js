@@ -30,7 +30,7 @@ function dhms(ms) {
   return resultado;
 }
 
-  const message = users.map((v, index) => `*\`📂 Sylph | Subbot: ${index + 1}\`* \n*\`🚀 Tag:\` @${v.user.jid.replace(/[^0-9]/g, '')}*\n*• wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}menu*\n*\`🌼 Nombre: ${v.user.name || '-'}\`*\n*\`🌱 Uptime: ${v.uptime ? dhms(Date.now() - v.uptime) : "Desconocido"}\`*`).join('\n\n*─ ── ──  ── ── ── ── ──  ── ── ─*\n\n');
+  const message = users.map((v, index) => `*\`📂 StarCore | Subbot: ${index + 1}\`* \n*\`🚀 Tag:\` @${v.user.jid.replace(/[^0-9]/g, '')}*\n*• wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}menu*\n*\`🌼 Nombre: ${v.user.name || '-'}\`*\n*\`🌱 Uptime: ${v.uptime ? dhms(Date.now() - v.uptime) : "Desconocido"}\`*`).join('\n\n*─ ── ──  ── ── ── ── ──  ── ── ─*\n\n');
   const replyMessage = message.length === 0 ? 'No hay' : message;
   const totalUsers = users.length;
   const responseMessage = `
@@ -39,9 +39,9 @@ function dhms(ms) {
  ${replyMessage.trim()}
  
  
-_*\`Developed by I'm Fz ~\`*_`.trim();
+_*\`Developed by Staff StarCore\`*_`.trim();
 
-  await conn.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/980qV7F/Sylph.jpg' }, caption: responseMessage, mentions: conn.parseMention(responseMessage)}, {quoted: fkontak});
+  await conn.sendMessage(m.chat, { image: { url: 'https://files.catbox.moe/rcuko0.jpg' }, caption: responseMessage, mentions: conn.parseMention(responseMessage)}, {quoted: fkontak});
 }
 handler.help = ['botlist']
 handler.tags = ['bebot']
