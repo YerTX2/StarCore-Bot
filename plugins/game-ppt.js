@@ -53,7 +53,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }
 }
 handler.help = ['ppt']
-handler.tags = ['game']
+handler.tags = ['fun']
 handler.command = ['ppt'] 
 handler.register = false
 
