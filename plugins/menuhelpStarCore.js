@@ -181,7 +181,7 @@ await m.react('🔱')
         externalAdReply: {
         title: 'MENU PRINCIPAL',
         body: 'HELP',
-        thumbnailUrl: img,
+        thumbnailUrl: video,
         sourceUrl: global.canal,
         mediaType: 1,
         renderLargerThumbnail: true
