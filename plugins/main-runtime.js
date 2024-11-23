@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
    m.reply(`🏮 *${mssg.uptime}*  \n\n${muptime}`) 
 }
 handler.help = ['runtime'] 
-handler.tags = ['main']
+handler.tags = ['group']
 handler.command = ['runtime', 'uptime']
 export default handler 
 
