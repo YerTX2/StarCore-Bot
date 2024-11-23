@@ -120,7 +120,7 @@ async function connectionUpdate(update) {
     if (connection == 'open') {
     conn.isInit = true
     global.conns.push(conn)
-    await parent.reply(m.chat, args[0] ? 'Conectado con exito' : 'Conectado exitosamente con Sylphiette! 🚀', m, rpl)
+    await parent.reply(m.chat, args[0] ? 'Conectado con exito' : 'Conectado exitosamente con StarCore-Bot! 🚀', m, rpl)
     await sleep(5000)
     if (args[0]) return
 
