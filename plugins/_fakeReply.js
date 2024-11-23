@@ -21,7 +21,7 @@ export async function before(m, { conn }) {
     forwardedNewsletterMessageInfo: {
       newsletterJid: '120363350628883149@newsletter',
       serverMessageId: 100,
-      newsletterName: nam,
+      newsletterName: 'StarCore | Team',
     }
     }
   }
