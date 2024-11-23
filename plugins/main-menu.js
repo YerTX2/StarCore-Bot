@@ -253,9 +253,9 @@ serverMessageId: -1
     throw e
   }
 }
-handler.command = ['menu', 'help', 'menú', 'commands', 'comandos', '?']
-handler.register = true
-export default handler
+//handler.command = ['menu', 'help', 'menú', 'commands', 'comandos', '?']
+//handler.register = true
+//export default handler
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
