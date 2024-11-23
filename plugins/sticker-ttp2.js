@@ -16,7 +16,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 }
 handler.help = ['ttp2 <text>']
-handler.tags = ['sticker']
+handler.tags = ['tools']
 handler.command = ['ttp2', 'ttpdark']
 handler.disabled = true
 
