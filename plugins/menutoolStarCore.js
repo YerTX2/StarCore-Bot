@@ -8,7 +8,7 @@ import fetch from 'node-fetch'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
-  before: `“ʜᴏʟᴀ *%name*, a qui esta todos los comandos Para Mi Mi Staff👥"
+  before: `“ʜᴏʟᴀ *%name*, a qui esta todos los comandos de Tools 🔥"
 
 
 ▬▭▬▭▬▭▬✦✧✦▬▭▬▭▬▭▬
