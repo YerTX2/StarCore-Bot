@@ -25,7 +25,6 @@ const i = ``
       if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply('Máximo 10 segundos')
       let img = await q.download?.()
       if (!img) throw `✳️ Responde a una imagen o video con*${usedPrefix + command}*`
-     if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: packname, body: `StarCore-Bot - MD 🧑‍💻`, mediaType: 2, sourceUrl: redes, thumbnail: icons}}}, { quoted: m }) 
       let out
       try {
         stiker = await sticker(img, false, h, i)
