@@ -3,6 +3,16 @@ import uploadFile from '../lib/uploadFile.js'
 import uploadImage from '../lib/uploadImage.js'
 import { webp2png } from '../lib/webp2mp4.js'
 
+conn.sendMessage(m.chat, { image: { url: videoInfo.thumbnail }, caption: body,
+contextInfo: {
+mentionedJid: [m.sender],
+isForwarded: true,
+forwardingScore: 1, 
+forwardedNewsletterMessageInfo: {
+newsletterJid: '120363350628883149@newsletter',
+newsletterName: '【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】',
+serverMessageId: -1
+}}}, { quoted: fkontak})
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   let stiker = false
 const usser = conn.getName(m.sender)
@@ -41,17 +51,6 @@ const i = ``
     else throw `${mssg.stickError}`
   }
 }
-conn.sendMessage(m.chat, { image: { url: videoInfo.thumbnail }, caption: body,
-contextInfo: {
-mentionedJid: [m.sender],
-isForwarded: true,
-forwardingScore: 1, 
-forwardedNewsletterMessageInfo: {
-newsletterJid: '120363350628883149@newsletter',
-newsletterName: '【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】',
-serverMessageId: -1
-}}}, { quoted: fkontak})
-
 handler.help = ['sticker']
 handler.tags = ['tools']
 handler.command = ['s', 'sticker'] 
