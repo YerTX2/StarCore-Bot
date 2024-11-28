@@ -1,6 +1,6 @@
 import yts from 'yt-search';
 const handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) throw `\`\`\`[ 🌴 ] Por favor ingresa un texto. Ejemplo:\n${usedPrefix + command} Did i tell u that i miss you\`\`\``;
+  if (!text) throw `\`\`\`[🌠] Por favor ingresa un texto. Ejemplo:\n${usedPrefix + command} Did i tell u that i miss you\`\`\``;
 
   const isVideo = /vid$/.test(command);
   const search = await yts(text);
@@ -10,7 +10,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 
   const videoInfo = search.all[0];
-  const body = `\`\`\`⊜─⌈ 📻 ◜StarCore Play◞ 📻 ⌋─⊜
+  const body = `\`\`\`⊜─⌈ 💿 ◜YouTube Play◞ 💿 ⌋─⊜
 
     ≡ Título : » ${videoInfo.title}
     ≡ Views : » ${videoInfo.views}
@@ -18,17 +18,12 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     ≡ Uploaded : » ${videoInfo.ago}
     ≡ URL : » ${videoInfo.url}
 
-# 🌴 Su ${isVideo ? 'Video' : 'Audio'} se está enviando, espere un momento...\`\`\``;
-conn.sendMessage(m.chat, { image: { url: videoInfo.thumbnail }, caption: body,
-contextInfo: {
-mentionedJid: [m.sender],
-isForwarded: true,
-forwardingScore: 1, 
-forwardedNewsletterMessageInfo: {
-newsletterJid: '120363350628883149@newsletter',
-newsletterName: '【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】',
-serverMessageId: -1
-}}}, { quoted: fkontak})
+# 🌠 Su ${isVideo ? 'Video' : 'Audio'} se está enviando, espere un momento...\`\`\``;
+
+  conn.sendMessage(m.chat, {
+    image: { url: videoInfo.thumbnail },
+    caption: body,
+  }, { quoted: fkontak });
 
   let result;
   try {
@@ -55,7 +50,7 @@ serverMessageId: -1
 
 handler.command = ['play', 'playvid'];
 handler.help = ['play', 'playvid'];
-handler.tags = ['descargasStarcore'];
+handler.tags = ['dl'];
 handler.diamond = 4;
 
 export default handler;
@@ -88,7 +83,7 @@ async function mp3(url, { quality = '192' } = {}) {
     const mp3Link = response.data.url;
     return {
       status: true,
-      creator: "I'm Fz ~",
+      creator: "StaCore",
       msg: "¡Descarga de contenido con éxito!",
       title: videoData.title,
       thumbnail: videoData.image,
@@ -118,7 +113,7 @@ async function mp4(url, { quality = '480' } = {}) {
     const mp4Link = response.data.url;
     return {
       status: true,
-      creator: "I'm Fz ~",
+      creator: "StarCore",
       msg: "¡Descarga de contenido con éxito!",
       title: videoData.title,
       thumbnail: videoData.image,
