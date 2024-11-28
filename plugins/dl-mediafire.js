@@ -1,63 +1,18 @@
+/*- `PLUGIN DOWNLOAD MEDIAFIRE`- By KenisawaDev*/
 
 import fetch from 'node-fetch'
-import { mediafiredl } from '@bochilteam/scraper'
-import fg from 'api-dylux'
-let free = 150 // limite de descarga
-let prem = 500
-let handler = async (m, { conn, args, text, usedPrefix, command, isOwner, isPrems }) => {
 
-   if (!args[0]) throw `✳️ ${mssg.noLink('Mediafire')}`
-    if (!args[0].match(/mediafire/gi)) throw `❎ ${mssg.noLink('Mediafire')}`
-    m.react(rwait)
-
-    let limit = isPrems || isOwner ? prem : free
-          let u = /https?:\/\//.test(args[0]) ? args[0] : 'https://' + args[0]
-    let ss = await (await fetch(global.API('nrtm', '/api/ssweb', { delay: 1000, url: u }))).buffer()
-    try {
-    let res = await mediafiredl(args[0])
-    let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
-    let isLimit = limit * 1024 < filesize
-    let caption = `
-   ≡ *MEDIAFIRE DL*
-
-*📌${mssg.name}:* ${filename}
-*⚖️${mssg.size}:* ${filesizeH}
-*🔼${mssg.aploud}:* ${aploud}
-${isLimit ? `\n▢ ${mssg.limitdl} *+${free} MB* ${mssg.limitdlTe} *${prem} MB*` : ''} 
-`.trim()
-    await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
-    if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
-    m.react(done)
-
-  } catch { 
-
-  try {
-        let res = await fg.mediafireDl(args[0])
-    let { url, url2, filename, ext, upload_date, filesize, filesizeB } = res
-
-           let isLimit = limit * 1024 < filesizeB
-    let caption = `
-   ≡ *MEDIAFIRE DL*
-
-*📌${mssg.name}:* ${filename}
-*⚖️${mssg.size}:* ${filesize}
-*🔼${mssg.aploud}:* ${upload_date}
-${isLimit ? `\n▢ ${mssg.limitdl} *+${free} MB* ${mssg.limitdlTe} *${prem} MB*` : ''} 
-`.trim()
-await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
-if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
-    m.react(done)
-  } catch {
-    m.reply(mssg.error)
-  }
-
-  }
-
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+if (!text) throw m.reply(`Ingresa un link de mediafire\n*🌸 Ejemplo:* ${usedPrefix}${command} https://www.mediafire.com/file/2v2x1p0x58qomva/WhatsApp_Messenger_2.24.21.8_beta_By_WhatsApp_LLC.apk/file`);
+conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
+        let ouh = await fetch(`https://api.agatz.xyz/api/mediafire?url=${text}`)
+  let gyh = await ouh.json()
+        await conn.sendFile(m.chat, gyh.data[0].link, `${gyh.data[0].nama}`, `*🌹 Nombre:* ${gyh.data[0].nama}\n*🪷 Tamaño:* ${gyh.data[0].size}\n*🍒 Extensión:* ${gyh.data[0].mime}\n> ৎ୭࠭͢𝒴𝓊𝓀𝒾_𝒮𝓊𝑜𝓊-𝐵𝑜𝑡𝐭ⷭ𓆪͟͞ `, m)
+        await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
 }
-handler.help = ['mediafire <url>']
-handler.tags = ['dl', 'prem']
-handler.command = ['mediafire', 'mfire'] 
-handler.diamond = true
-handler.premium = false
-
+handler.help = ['mediafire']
+handler.tags = ['descargas']
+handler.command = /^(mediafire|mf)$/i
+handler.premium = true
+handler.register = true
 export default handler
