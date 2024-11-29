@@ -20,7 +20,7 @@ const defaultMenu = {
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
-'fun': 'menujuegos',
+'fun': '𝕸𝖊𝖓𝖚 𝕵𝖚𝖊𝖌𝖔𝖘,
 }
 let img = 'https://i.ibb.co/34Q4S9h/StarCore.jpg'
 
