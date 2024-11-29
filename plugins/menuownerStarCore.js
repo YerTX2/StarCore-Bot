@@ -15,7 +15,7 @@ const defaultMenu = {
 %readmore
 `.trimStart(),
   header: '╭─(❀)❝┊ *_`%category`_* ┊❝(❀)',
-  body: '┊➧ %cmd\n',
+  body: '┊⚜️⃞̸݅𓏲⊰̴ؕ %cmd\n',
   footer: '╰───────────── –\n',
   after: ``,
 }
