@@ -7,7 +7,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let stiker = false
 const usser = conn.getName(m.sender)
 const h = ` ㌹ StarCore-Bot`;
-const i = ``
+const i = `By Staff`
   try {         
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || q.mediaType || ''
