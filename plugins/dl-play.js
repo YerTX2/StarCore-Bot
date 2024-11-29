@@ -49,7 +49,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.command = ['play', 'playvid'];
-handler.help = ['play', 'playvid'];
+handler.help = ['play2', 'playvid'];
 handler.tags = ['dl'];
 handler.diamond = 4;
 
