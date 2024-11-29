@@ -8,23 +8,22 @@ import fetch from 'node-fetch'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
-  before: `“ʜᴏʟᴀ *%name*, a qui esta todos los comandos De Juegos⚜️"
+  before: `“ʜᴏʟᴀ *%name*, a qui esta mi menu de juegos🎮"
 
-
-▬▭▬▭▬▭▬✦✧✦▬▭▬▭▬▭▬
+*─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ──ׄ*
 %readmore
 `.trimStart(),
-  header: '╭─(❀)❝┊ *_`%category`_* ┊❝(❀)',
-  body: '┊🎮 %cmd\n',
-  footer: '╰───────────── –\n',
+  header: '┏━━⪩「 *_`%category`_* 」⪨',
+  body: '┃✧ %cmd\n',
+  footer: '┗━━━━━━━━━━━━━━━━⪩\n',
   after: ``,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
-'fun', 'game': 'menujuegos',
+'fun': 'menujuegos',
 }
-
 let img = 'https://i.ibb.co/34Q4S9h/StarCore.jpg'
+
   try {
           // DEFAULT MENU
       let dash = global.dashmenu
@@ -180,8 +179,7 @@ await m.react('🎮')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'menujuegos',
-        body: 'menujuegos',
+        body: 'MENU JUEGOS',
         thumbnailUrl: img,
         sourceUrl: global.canal,
         mediaType: 1,
@@ -196,7 +194,7 @@ await m.react('🎮')
 }
 handler.help = ['menujuegos']
 handler.tags = ['main']
-handler.command = ['menujuegos','juegosmenu', 'menugamer', 'menujg']
+handler.command = ['menujg', 'menujuegos', 'menujuego']
 
 export default handler
 
