@@ -26,6 +26,7 @@ const i = ``
       let img = await q.download?.()
       if (!img) throw `✳️ Responde a una imagen o video con*${usedPrefix + command}*`
       let out
+      let redes
       try {
         stiker = await sticker(img, false, h, i)
       } catch (e) {
