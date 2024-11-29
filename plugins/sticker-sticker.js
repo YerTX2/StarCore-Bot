@@ -6,7 +6,7 @@ import { webp2png } from '../lib/webp2mp4.js'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   let stiker = false
 const usser = conn.getName(m.sender)
-const h = ` ㌹ ${usser}`;
+const h = ` ㌹ StarCore-Bot`;
 const i = ``
   try {         
     let q = m.quoted ? m.quoted : m
