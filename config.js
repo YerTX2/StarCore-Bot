@@ -51,8 +51,8 @@ global.APIKeys = { // APIKey Here
   'https://api.fgmods.xyz': `${fgkey}` //--- 100 de límite diario --- Regístrese en https://api.fgmods.xyz/
 }
 // Sticker WM
-global.packname = 'StarCore | Bot - Multi Device' 
-global.author = `YerTX2`
+global.packname = '🎅StarCore | Bot - Multi Device🎁' 
+global.author = `⛄Staff StarCore ❄️`
 global.wm = '┊ꦿ🎄⿻ StarCore | Wa Bot⛄❜ೃ'
 
 global.insta = 'https://www.instagram.com/'
