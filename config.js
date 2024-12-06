@@ -53,7 +53,7 @@ global.APIKeys = { // APIKey Here
 // Sticker WM
 global.packname = 'StarCore | Bot - Multi Device' 
 global.author = `YerTX2`
-global.wm = '┊ꦿ🎄⿻ StarCore | Wa Bot❜ೃ'
+global.wm = '┊ꦿ🎄⿻ StarCore | Wa Bot⛄❜ೃ'
 
 global.insta = 'https://www.instagram.com/'
 
@@ -63,7 +63,7 @@ global.imagen = fs.readFileSync('./src/StarCore.jpg');
 global.imagen3 = 'https://telegra.ph/file/62fa3e30dc861a3fde73b.jpg';
 global.catalogo = imagen0
 //--info
-global.botName = 'StarCore - Bot'
+global.botName = '❄️StarCore - Bot⛄'
 global.fglog = 'https://i.ibb.co/1zdz2j3/logo.jpgs' 
 global.link_ = 'https://chat.whatsapp.com/CN3YieShy2S3LnVRJ7aPPm'
 
@@ -81,7 +81,7 @@ global.scrapers = scrapers
 
 global.ytdl = ytdl
 global.yt = yt
-global.wait = '⌛ espere un momento se esta enviando su pedido'
+global.wait = '⌛ espere un momento se esta enviando su pedido❄️'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
