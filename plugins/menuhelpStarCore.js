@@ -8,13 +8,13 @@ import fetch from 'node-fetch'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
-  before: `“ʜᴏʟᴀ *%name*, a qui esta todos los menús disponible del bot con la lista de comandos🗡️"
+  before: `“🎄*Feliz Navidad* *%name*, a qui esta todos los menús disponible del bot con la lista de comandos⛄"
 
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ──ׄ*
 %readmore
 `.trimStart(),
   header: '┏━━⪩「 *_`%category`_* 」⪨',
-  body: '┃✧ %cmd\n',
+  body: '┃❄️ %cmd\n',
   footer: '┗━━━━━━━━━━━━━━━━⪩\n',
   after: ``,
 }
